@@ -7,5 +7,20 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/externalLib/xmlbeans-2.6.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/externalLib/poi-ooxml-schemas-3.11-beta2.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/externalLib/poi-ooxml-3.12-20150511.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/externalLib/poi-3.12-20150511.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/externalLib/g-wiz-1.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
