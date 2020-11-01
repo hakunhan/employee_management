@@ -1,12 +1,12 @@
 import java.util.Date;
 
 public class Employee {
-    private int ID;
-    private String name;
-    private String phoneNumber;
-    private Date dob;
-    private Account account;
-    private WorkTimetable workTimetable;
+    protected int ID;
+    protected String name;
+    protected String phoneNumber;
+    protected Date dob;
+    protected Account account;
+    protected WorkTimetable workTimetable;
 
     public Employee(int ID, String name, String phoneNumber,String address , Date dob, Account account) {
         if(!validateID(ID)){
