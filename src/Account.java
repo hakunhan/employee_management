@@ -60,5 +60,9 @@ public class Account {
 
     public boolean validateID(int ID){
         return ID >= 1 && ID <= 111;
+   
+    public void setPassword{
+    	this.password = password;
     }
+
 }
