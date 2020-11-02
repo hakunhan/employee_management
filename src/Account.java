@@ -58,11 +58,7 @@ public class Account {
         return password != null && password.length() > 0 && password.length() <=30;
     }
 
-    public boolean validateID(int ID){
+    public boolean validateID(int ID) {
         return ID >= 1 && ID <= 111;
-   
-    public void setPassword{
-    	this.password = password;
     }
-
 }
