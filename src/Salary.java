@@ -26,7 +26,8 @@ public class Salary {
        FileDialog dialog = new FileDialog((Frame)null, "Select File to Open");
        dialog.setMode(FileDialog.LOAD);
        dialog.setVisible(true);
-       String file = dialog.getFile();
+       String file = dialog.getDirectory() + dialog.getFile();
+       System.out.println(file + " chosen.");
        return file;
    }
 
@@ -57,10 +58,10 @@ public class Salary {
                     switch (cell.getCellType())
                     {
                         case Cell.CELL_TYPE_NUMERIC:
-                            System.out.print(cell.getNumericCellValue() + "t");
+                            System.out.print(cell.getNumericCellValue() + " ");
                             break;
                         case Cell.CELL_TYPE_STRING:
-                            System.out.print(cell.getStringCellValue() + "t");
+                            System.out.print(cell.getStringCellValue() + " ");
                             break;
                     }
                 }
