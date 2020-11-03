@@ -17,7 +17,6 @@ public class GetTime {
     private String dayOfMonth[] = {"MON", "TUE", "WED", "THURS", "FRID", "SAT", "SUN"};
 
 
-
     public GetTime(){
         int lastDayOfMonth[] = {24,25,26,27,28,29,30,31};
 
@@ -64,5 +63,30 @@ public class GetTime {
             count++;
         } while ( ! countToEndWeek.isAfter(endOfMonth) );
         return count;
+    }
+
+    public String endOfMonth(){
+        return Integer.toString(endOfMonth.getDayOfMonth());
+    }
+
+    public String getMonthNum(String month){
+        String monthInt = "0";
+        switch (month) {
+            case "JANUARY":     monthInt = "01";       break;
+            case "FEBRUARY":    monthInt = "02";      break;
+            case "MARCH":       monthInt = "03";         break;
+            case "APRIL":       monthInt = "04";         break;
+            case "MAY":         monthInt = "05";           break;
+            case "JUNE":        monthInt = "06";          break;
+            case "JULY":        monthInt = "07";          break;
+            case "AUGUST":      monthInt = "08";        break;
+            case "SEPTEMBER":   monthInt = "09";     break;
+            case "OCTOBER":     monthInt = "10";       break;
+            case "NOVEMBER":    monthInt = "11";      break;
+            case "DECEMBER":    monthInt = "12";      break;
+            default: monthInt = "32"; break;
+        }
+
+        return monthInt;
     }
 }
