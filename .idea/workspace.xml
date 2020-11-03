@@ -64,7 +64,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="82553e13-e507-4362-9086-d7221afb50d1" name="Default Changelist" comment="" />
+      <changelist id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="" />
       <created>1604059003003</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -138,6 +138,10 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="315" y="188" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.40.1536.824@0.40.1536.824" timestamp="1604369658284" />
+    <state x="292" y="180" width="1124" height="810" key="dock-window-1" timestamp="1604382819195">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="292" y="180" width="1124" height="810" key="dock-window-1/0.40.1536.824@0.40.1536.824" timestamp="1604382819195" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
