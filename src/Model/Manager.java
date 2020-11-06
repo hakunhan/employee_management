@@ -1,5 +1,7 @@
 package Model;
 
+import Database.Database;
+
 import java.util.Date;
 
 public class Manager extends Employee{

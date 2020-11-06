@@ -12,7 +12,7 @@ import utils.TextIO;
 /**
  * Java program that write data from Excel file.
  */
-public class ExcelPrinter {
+public class EmployeeWorkTimeExcelPrinter {
     private Object[][] date  = new Object[10][8];
     private int currentDateIndex = 0;
 
@@ -31,7 +31,7 @@ public class ExcelPrinter {
     /**
      *  constructor that create excel .xlsx file and set rows height and columns width
      */
-    public ExcelPrinter() throws IOException{
+    public EmployeeWorkTimeExcelPrinter() throws IOException{
         GetTime time = new GetTime();
         String month = time.getMonth();
         XSSFWorkbook workbook = new XSSFWorkbook();

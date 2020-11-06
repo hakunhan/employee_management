@@ -43,9 +43,9 @@ public class Salary {
         Salary s = new Salary(18);
         ReadExcelFile read = new ReadExcelFile();
 
-        read.chooseFile();
         read.getMonthOfExcelFile();
-        Object[][] arr = read.employeeWorkInMonth("HÀ");
+        Object[][] arr = read.getWorkTimeOfEmployee("HÀ");
+        Object[][] arr1 = read.employeeWorkInMonth(arr);
 
         System.out.println(s.calculateSalary(arr));
     }

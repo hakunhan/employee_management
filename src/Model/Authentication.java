@@ -1,5 +1,7 @@
 package Model;
 
+import Database.Database;
+
 public class Authentication {
     private Database database;
 

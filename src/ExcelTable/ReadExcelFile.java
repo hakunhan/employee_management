@@ -17,6 +17,10 @@ public class ReadExcelFile {
     private String month;
     private GetTime gt = new GetTime();
 
+    public ReadExcelFile(){
+        chooseFile();
+    }
+
     public void chooseFile() {
         FileDialog dialog = new FileDialog((Frame) null, "Select File to Open");
         dialog.setMode(FileDialog.LOAD);
@@ -108,9 +112,9 @@ public class ReadExcelFile {
         return workTime.toArray();
     }
 
-    public Object[][] employeeWorkInMonth(String employeeName) throws IOException {
+    public Object[][] employeeWorkInMonth(Object[][] workTimeOfEmployee){
         Object[] date = getDateInExcelFile();
-        Object[] workTime = getWorkTimeOfEmployee(employeeName);
+        Object[] workTime = workTimeOfEmployee;
         Object[][] temp = new Object[date.length][2];
         int count = 0;
 
@@ -145,5 +149,19 @@ public class ReadExcelFile {
         }
 
         return result;
+    }
+
+    public int countEmployeeWorkDay(String employeeName) throws IOException {
+        int count = 0;
+        Object[][] employeeWorkInMonth = employeeWorkInMonth(employeeName);
+
+        for (Object[] a: employeeWorkInMonth){
+            if (a[0] == null || a[1] == null){
+                break;
+            }
+
+            count++;
+        }
+        return count;
     }
 }
