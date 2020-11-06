@@ -42,14 +42,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/externalLib/mysql-connector-java-8.0.22.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GitHub/assignment_FITSE" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="Salary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Salary" />
+      <option name="MAIN_CLASS_NAME" value="Model.Salary" />
       <module name="project_SED" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,10 +90,11 @@
     </state>
     <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1604324378797" />
     <state x="549" y="129" key="#com.intellij.ide.util.MemberChooser/0.40.1536.824@0.40.1536.824" timestamp="1604365532847" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1604316879580">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="521" y="174" key="FileChooserDialogImpl" timestamp="1604460989683">
+      <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604316879580" />
+    <state x="521" y="174" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1604460989683" />
     <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1604374316254">
       <screen x="0" y="40" width="1536" height="824" />
     </state>

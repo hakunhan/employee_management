@@ -1,3 +1,5 @@
+package Model;
+
 public class Authentication {
     private Database database;
 

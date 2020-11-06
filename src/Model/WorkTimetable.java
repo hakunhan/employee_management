@@ -1,3 +1,5 @@
+package Model;
+
 public class WorkTimetable {
     private int employee_ID;
     private String monday = " ";

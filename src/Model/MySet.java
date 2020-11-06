@@ -1,12 +1,14 @@
+package Model;
+
 import java.util.Iterator;
 import java.util.Vector;
 
 /**
  * @overview a collection data type that the objects
  * @attribute
- * elements MySet<Object> Vector<Object>
+ * elements Model.MySet<Object> Vector<Object>
  * @object
- * A typical MySet is MySet = {elements} where
+ * A typical Model.MySet is Model.MySet = {elements} where
  * elements(elements)
  * @abstract_properties
  * mutable(elements) = true /\ optional(elements) = false
@@ -73,7 +75,7 @@ public class MySet<Object>{
 	 */
   	public Object getElement(int index){
   		if(index < 0 || index >= size()) {
-			System.out.println("Index out of range of the MySet!");
+			System.out.println("Index out of range of the Model.MySet!");
 		}
   		return elements.elementAt(index);
 	}
@@ -94,7 +96,7 @@ public class MySet<Object>{
      */
   	public Object choose() throws IllegalStateException {
     	if (size() == 0)
-      		throw new IllegalStateException("MySet.choose: set is empty");
+      		throw new IllegalStateException("Model.MySet.choose: set is empty");
     	return (Object) elements.lastElement();
   	}
 
@@ -115,7 +117,7 @@ public class MySet<Object>{
   	}
 
 	/**
-	 * @effects return a generator that iterate through MySet
+	 * @effects return a generator that iterate through Model.MySet
 	 * until there is not any element left
 	 */
 	public Iterator iterator(){
@@ -123,14 +125,14 @@ public class MySet<Object>{
 	}
 
 	/**
-	 * @effects return a string contain elements inside MySet
+	 * @effects return a string contain elements inside Model.MySet
 	 */
   	@Override
   	public String toString() {
     	if (size() == 0)
-      		return "MySet:{ }";
+      		return "Model.MySet:{ }";
 
-    	String s = "MySet:{" + elements.get(0).toString();
+    	String s = "Model.MySet:{" + elements.get(0).toString();
     	for (int i = 1; i < size(); i++) {
       		s = s + " , " + elements.elementAt(i).toString();
     	}
@@ -165,7 +167,7 @@ public class MySet<Object>{
 	 * @overview An inner class that implements the Iterator interface
 	 * @attribute
 	 * currentElements Integer int
-	 * elements MySet
+	 * elements Model.MySet
 	 * @object
 	 * A typical MySetGen is MySetGen {currentElements, elements}
 	 * where currentElements(currentElements), elements(elements)
@@ -207,7 +209,7 @@ public class MySet<Object>{
 		public java.lang.Object next() {
 			currentElements++;
 			if (currentElements >= elements.size()) {
-				System.out.println("There is no more Object class in the MySet!");
+				System.out.println("There is no more Object class in the Model.MySet!");
 			}
 			return elements.getElement(currentElements);
 		}

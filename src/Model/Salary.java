@@ -1,5 +1,7 @@
+package Model;
+
 import java.io.IOException;
-import ExcelTable.GetTime;
+
 import ExcelTable.ReadExcelFile;
 
 public class Salary {
