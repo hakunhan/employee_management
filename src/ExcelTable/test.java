@@ -1,12 +1,11 @@
 package ExcelTable;
-import utils.TextIO;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class test {
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        ExcelPrinter ep = new ExcelPrinter();
+        EmployeeWorkTimeExcelPrinter ep = new EmployeeWorkTimeExcelPrinter();
         GetTime time = new GetTime();
         GetWorkTime workTime = new GetWorkTime();
 

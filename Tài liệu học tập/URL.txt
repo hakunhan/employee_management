@@ -1,2 +1,2 @@
-﻿Học về Database và JavaSwing
+﻿Học về Database.Database và JavaSwing
 https://studyandshare.wordpress.com/category/java-programming-language/database-voi-jdbc
