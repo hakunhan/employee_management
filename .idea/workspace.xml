@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Database/DBUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExcelTable/EmployeeSalaryExcelPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTable/EmployeeSalaryExcelPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/database.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,25 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.EmployeeSalaryExcelPrinter">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HieuHoang\Documents\project_SED\src\Database" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DBUtils">
+    <configuration name="DBUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Database.DBUtils" />
+      <module name="project_SED" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeeSalaryExcelPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ExcelTable.EmployeeSalaryExcelPrinter" />
       <module name="project_SED" />
@@ -100,9 +118,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DBUtils" />
+        <item itemvalue="Application.Salary" />
         <item itemvalue="Application.EmployeeSalaryExcelPrinter" />
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.Salary" />
         <item itemvalue="Application.ReadEmployeeExcelFile" />
       </list>
     </recent_temporary>
