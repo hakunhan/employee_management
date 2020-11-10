@@ -12,18 +12,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ReadExcelFile {
+public class ReadEmployeeExcelFile {
     private String filePath;
     private String month;
+    private int employeeWorkDay;
     private GetTime gt = new GetTime();
 
-    public ReadExcelFile(){
+    public ReadEmployeeExcelFile(){
         chooseFile();
+        getMonthOfExcelFile();
     }
 
     public void chooseFile() {
-        FileDialog dialog = new FileDialog((Frame) null, "Select File to Open");
-        dialog.setMode(FileDialog.LOAD);
+        FileDialog dialog = new FileDialog((Frame) null, "Select File to Open",FileDialog.LOAD);
         dialog.setVisible(true);
         String file = dialog.getDirectory() + dialog.getFile();
         System.out.println(file + " chosen.");
@@ -34,6 +35,7 @@ public class ReadExcelFile {
         String[] temp = filePath.split("\\\\");
         String[] tempTwo = temp[temp.length-1].split("-");
         String result = gt.getMonthNum(tempTwo[0]);
+        System.out.println(result);
         this.month = result;
     }
 
@@ -112,9 +114,9 @@ public class ReadExcelFile {
         return workTime.toArray();
     }
 
-    public Object[][] employeeWorkInMonth(Object[][] workTimeOfEmployee){
+    public Object[][] employeeWorkInMonth(String employeeName) throws IOException {
         Object[] date = getDateInExcelFile();
-        Object[] workTime = workTimeOfEmployee;
+        Object[] workTime = getWorkTimeOfEmployee(employeeName);
         Object[][] temp = new Object[date.length][2];
         int count = 0;
 
@@ -148,20 +150,22 @@ public class ReadExcelFile {
             resultCount++;
         }
 
+        this.employeeWorkDay = resultCount;
         return result;
     }
 
-    public int countEmployeeWorkDay(String employeeName) throws IOException {
-        int count = 0;
-        Object[][] employeeWorkInMonth = employeeWorkInMonth(employeeName);
+    public int getEmployeeWorkDay(){
+        return employeeWorkDay;
+    }
+
+    public static void main(String[] args) throws IOException {
+        ReadEmployeeExcelFile reader = new ReadEmployeeExcelFile();
+        Object[][] employeeWorkInMonth = reader.employeeWorkInMonth("HÀ");
 
         for (Object[] a: employeeWorkInMonth){
-            if (a[0] == null || a[1] == null){
-                break;
+            for (Object b: a){
+                System.out.println(b);
             }
-
-            count++;
         }
-        return count;
     }
 }

@@ -2,11 +2,10 @@ package Model;
 
 import java.io.IOException;
 
-import ExcelTable.ReadExcelFile;
+import ExcelTable.ReadEmployeeExcelFile;
 
 public class Salary {
     private float hourlyRate;
-
 
     public Salary(float hourlyRate) {
         this.hourlyRate = hourlyRate;
@@ -31,8 +30,8 @@ public class Salary {
             Object[] shiftWork = temp[1].toString().split("-");
             Object[] beginShiftWork = shiftWork[0].toString().split(":");
             Object[] endShiftWork = shiftWork[1].toString().split(":");
-            float beginTime = Float.parseFloat(beginShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
-            float endTime = Float.parseFloat(endShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
+            double beginTime = Float.parseFloat(beginShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
+            double endTime = Float.parseFloat(endShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
             workHour += endTime - beginTime;
         }
 
@@ -41,11 +40,10 @@ public class Salary {
 
     public static void main(String[] args) throws IOException {
         Salary s = new Salary(18);
-        ReadExcelFile read = new ReadExcelFile();
+        ReadEmployeeExcelFile read = new ReadEmployeeExcelFile();
 
         read.getMonthOfExcelFile();
-        Object[][] arr = read.getWorkTimeOfEmployee("HÀ");
-        Object[][] arr1 = read.employeeWorkInMonth(arr);
+        Object[][] arr = read.employeeWorkInMonth("HÀ");
 
         System.out.println(s.calculateSalary(arr));
     }

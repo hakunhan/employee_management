@@ -52,6 +52,7 @@ public class FormatCell {
     public static XSSFCellStyle format(XSSFWorkbook wb){
         XSSFCellStyle result = wb.createCellStyle();
         result.setAlignment(CellStyle.ALIGN_CENTER);
+        result.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
 
         XSSFFont font = wb.createFont();
         font.setFontName("Times New Roman");
