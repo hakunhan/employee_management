@@ -19,18 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hieu-NOVEMBER-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/ExcelTable/EmployeeSalaryExcelPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/ExcelTable/EmployeeSalaryExcelPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/ExcelTable/FormatCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/ExcelTable/FormatCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/ExcelTable/ReadExcelFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Salary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/Salary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExcelTable/EmployeeSalaryExcelPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTable/EmployeeSalaryExcelPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExcelTable/FormatCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTable/FormatCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExcelTable/ReadExcelFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExcelTable/ReadEmployeeExcelFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Salary.java" afterDir="false" />
-    </list>
+    <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
