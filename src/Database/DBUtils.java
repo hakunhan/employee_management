@@ -3,9 +3,7 @@ package Database;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class DBUtils {
@@ -13,6 +11,7 @@ public class DBUtils {
     private String user;
     private String password;
     private Connection connection;
+    private Statement statement;
 
     public void initialize(){
         Properties p = new Properties();
@@ -37,8 +36,40 @@ public class DBUtils {
         }
     }
 
+    public void createStatement(){
+        if (this.statement == null){
+            try {
+                this.statement = connection.createStatement();
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public ResultSet retrieveData(String mysqlCommand){
+        try {
+            createStatement();
+            ResultSet resultSet = statement.executeQuery(mysqlCommand);
+            return resultSet;
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         DBUtils utils = new DBUtils();
         utils.initialize();
+
+        String mysqlCommand = "SELECT * FROM employee;";
+        ResultSet rs = utils.retrieveData(mysqlCommand);
+        try{
+            while (rs.next()){
+                System.out.println(rs.getString(1));
+                System.out.println(rs.getString(2));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }
