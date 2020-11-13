@@ -1,2 +1,5 @@
 ﻿Học về Database.Database và JavaSwing
 https://studyandshare.wordpress.com/category/java-programming-language/database-voi-jdbc
+
+Xử lý lỗi connection failed:
+https://stackoverflow.com/questions/6865538/solving-a-communications-link-failure-with-jdbc-and-mysql
