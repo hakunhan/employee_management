@@ -1,7 +1,6 @@
 package Database;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
@@ -13,7 +12,11 @@ public class DBUtils {
     private Connection connection;
     private Statement statement;
 
-    public void initialize(){
+    public DBUtils(){
+        initialize();
+    }
+
+    private void initialize(){
         Properties p = new Properties();
         try{
             p.load(new FileInputStream("src\\Database\\database.properties"));
