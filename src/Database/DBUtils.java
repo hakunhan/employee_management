@@ -96,7 +96,6 @@ public class DBUtils {
 
     public static void main(String[] args) {
         DBUtils utils = new DBUtils();
-        utils.initialize();
 
         String mysqlCommand = "SELECT * FROM employee;";
         ResultSet rs = utils.retrieveData(mysqlCommand);
