@@ -57,6 +57,40 @@ public class DBUtils {
         return null;
     }
 
+    private int executeStatement(String mysqlStatement, int[] indexes, String[] values){
+        int rowNo = 0;
+
+        if (mysqlStatement == null){
+            throw new NullPointerException("mysqlStatement is null");
+        }
+        if (indexes != null && values != null) {
+            try {
+                PreparedStatement ps = connection.prepareStatement(mysqlStatement);
+
+                for (int i = 0; i < values.length; i++) {
+                    ps.setString(indexes[i], values[i]);
+                }
+                rowNo = ps.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return rowNo;
+    }
+
+    public int insertData(String mysqlStatement, int[] indexes, String[] values){
+        return executeStatement(mysqlStatement, indexes, values);
+    }
+
+    public int updateData(String mysqlStatement, int[] indexes, String[] values){
+        return executeStatement(mysqlStatement, indexes, values);
+    }
+
+    public int deleteData(String mysqlStatement, int[] indexes, String[] values){
+        return executeStatement(mysqlStatement, indexes, values);
+    }
+
     public static void main(String[] args) {
         DBUtils utils = new DBUtils();
         utils.initialize();
