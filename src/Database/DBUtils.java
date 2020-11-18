@@ -102,7 +102,6 @@ public class DBUtils {
         try{
             while (rs.next()){
                 System.out.println(rs.getString(1));
-                System.out.println(rs.getString(2));
             }
         }catch (SQLException e){
             e.printStackTrace();
