@@ -8,7 +8,6 @@ package GUI.Manager;
 import javax.swing.*;
 
 /**
- *
  * @author HieuHoang
  */
 public class Frame extends javax.swing.JFrame {

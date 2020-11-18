@@ -61,17 +61,37 @@ public class HomePagePanel extends javax.swing.JPanel {
         jButton3.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jButton3.setText("Export All Employee's Salary");
         jButton3.setPreferredSize(new java.awt.Dimension(300, 80));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jButton4.setText("Manage Employee");
         jButton4.setPreferredSize(new java.awt.Dimension(300, 80));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jButton5.setText("Export Working Timeable");
         jButton5.setPreferredSize(new java.awt.Dimension(300, 80));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jButton6.setText("Exit");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -122,6 +142,22 @@ public class HomePagePanel extends javax.swing.JPanel {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 

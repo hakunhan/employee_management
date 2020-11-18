@@ -1,5 +1,7 @@
 package Database;
 
+import com.mysql.cj.jdbc.exceptions.NotUpdatable;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -60,6 +62,30 @@ public class DBUtils {
         return null;
     }
 
+    private ResultSet executeQuery(String mysqlStatement, int[] indexes, String[] values){
+        ResultSet result = null;
+
+        if(mysqlStatement == null){
+            throw new NullPointerException("mysqlStatement is null");
+        }
+
+        if (indexes != null && values != null) {
+            try {
+                PreparedStatement ps = connection.prepareStatement(mysqlStatement);
+
+                for (int i = 0; i < values.length; i++) {
+                    ps.setString(indexes[i], values[i]);
+                }
+
+                result = ps.executeQuery();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
+    }
+
     private int executeStatement(String mysqlStatement, int[] indexes, String[] values){
         int rowNo = 0;
 
@@ -92,6 +118,10 @@ public class DBUtils {
 
     public int deleteData(String mysqlStatement, int[] indexes, String[] values){
         return executeStatement(mysqlStatement, indexes, values);
+    }
+
+    public ResultSet selectData(String mysqlStatement, int[] indexes, String[] values){
+        return executeQuery(mysqlStatement, indexes, values);
     }
 
     public static void main(String[] args) {
