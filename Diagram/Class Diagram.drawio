@@ -19,7 +19,7 @@
         <mxCell id="Y97-kvUSINqYxWR_9_tH-10" value="Model.Manager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="80" y="360" width="330" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="Y97-kvUSINqYxWR_9_tH-11" value="-datatbase: Database.Database " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Y97-kvUSINqYxWR_9_tH-10" vertex="1">
+        <mxCell id="Y97-kvUSINqYxWR_9_tH-11" value="-datatbase: Model.Database.Model.Database " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Y97-kvUSINqYxWR_9_tH-10" vertex="1">
           <mxGeometry y="26" width="330" height="24" as="geometry" />
         </mxCell>
         <mxCell id="Y97-kvUSINqYxWR_9_tH-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Y97-kvUSINqYxWR_9_tH-10" vertex="1">
@@ -106,7 +106,7 @@
         <mxCell id="lGjvOF8tFGYtCEthX3wj-0" value="Model.Authentication" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-180" y="230" width="200" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="lGjvOF8tFGYtCEthX3wj-1" value="-database: Database.Database" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="lGjvOF8tFGYtCEthX3wj-0">
+        <mxCell id="lGjvOF8tFGYtCEthX3wj-1" value="-database: Model.Database.Model.Database" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="lGjvOF8tFGYtCEthX3wj-0">
           <mxGeometry y="26" width="200" height="26" as="geometry" />
         </mxCell>
         <mxCell id="lGjvOF8tFGYtCEthX3wj-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="lGjvOF8tFGYtCEthX3wj-0">
@@ -121,7 +121,7 @@
             <mxPoint x="440" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lGjvOF8tFGYtCEthX3wj-5" value="Database.Database" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="lGjvOF8tFGYtCEthX3wj-5" value="Model.Database.Model.Database" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="520" y="360" width="290" height="190" as="geometry" />
         </mxCell>
         <mxCell id="lGjvOF8tFGYtCEthX3wj-6" value="-accountList: Model.MySet&lt;Model.Account&gt;&#xa;-employeeLIst: Model.MySet&lt;Model.Employee&gt;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="lGjvOF8tFGYtCEthX3wj-5">
