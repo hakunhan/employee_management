@@ -1,13 +1,11 @@
-package ExcelTable;
+package Model.ExcelTable;
 
 import java.io.*;
 import java.util.Date;
 
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import utils.TextIO;
 
 /**
  * Java program that write data from Excel file.

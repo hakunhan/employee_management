@@ -1,4 +1,4 @@
-package ExcelTable;
+package Model.ExcelTable;
 
 import java.time.DayOfWeek;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package Database;
+package Model.Database;
 
 import Model.Account;
 import Model.Employee;

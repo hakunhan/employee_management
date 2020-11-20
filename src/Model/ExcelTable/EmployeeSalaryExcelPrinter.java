@@ -1,4 +1,4 @@
-package ExcelTable;
+package Model.ExcelTable;
 
 import java.io.*;
 

@@ -2,7 +2,7 @@ package Model;
 
 import java.io.IOException;
 
-import ExcelTable.ReadEmployeeExcelFile;
+import Model.ExcelTable.ReadEmployeeExcelFile;
 
 public class Salary {
     private float hourlyRate;
