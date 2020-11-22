@@ -1,6 +1,6 @@
 package Model;
 
-import Database.Database;
+import Model.Database.Database;
 
 import java.util.Date;
 

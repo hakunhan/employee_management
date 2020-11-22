@@ -6,9 +6,10 @@ public class Employee {
     protected int ID;
     protected String name;
     protected String phoneNumber;
+    protected String address;
     protected Date dob;
     protected Account account;
-    protected WorkTimetable workTimetable;
+    protected Schedule schedule;
 
     public Employee(int ID, String name, String phoneNumber,String address , Date dob, Account account) {
         if(!validateID(ID)){
@@ -38,6 +39,7 @@ public class Employee {
 
         this.ID = ID;
         this.name = name;
+        this.address = address;
         this.phoneNumber = phoneNumber;
         this.dob = dob;
         this.account = account;
@@ -91,6 +93,14 @@ public class Employee {
         if (validateAccount(account))
             return;
         this.account = account;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public void viewWorkTime(){

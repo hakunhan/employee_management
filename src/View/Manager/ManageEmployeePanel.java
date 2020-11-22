@@ -10,8 +10,7 @@ package View.Manager;
  * @author HieuHoang
  */
 public class ManageEmployeePanel extends javax.swing.JPanel {
-    private int horizontal = 0;
-    private int vertical = 0;
+
     /**
      * Creates new form ManageEmployeePanel
      */
@@ -29,6 +28,8 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setPreferredSize(new java.awt.Dimension(800, 600));
 
@@ -40,13 +41,43 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [][] {
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null}
+                },
+                new String [] {
+                        "Name", "Date of birth", "Phone number", "Address", "Edit", "Remove"
+                }
+        ) {
+            Class[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+            jTable1.getColumnModel().getColumn(4).setResizable(false);
+            jTable1.getColumnModel().getColumn(5).setResizable(false);
+        }
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(641, Short.MAX_VALUE)
-                                .addComponent(jButton1)
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollPane1)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(0, 637, Short.MAX_VALUE)
+                                                .addComponent(jButton1)))
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -54,7 +85,9 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(539, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(126, Short.MAX_VALUE))
         );
     }// </editor-fold>
 
@@ -65,5 +98,7 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify
     private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration
 }
