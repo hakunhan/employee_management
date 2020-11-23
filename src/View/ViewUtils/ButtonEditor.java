@@ -41,7 +41,7 @@ public class ButtonEditor extends DefaultCellEditor {
     public Object getCellEditorValue() {
         if (isPushed) {
             if (JOptionPane.showConfirmDialog(null, "Are you sure want to delete employee schedule?", "WARNING",
-                    JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 
             } else {
 

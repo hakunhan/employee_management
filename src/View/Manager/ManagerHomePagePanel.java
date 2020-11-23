@@ -40,6 +40,7 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
         ManageEmployeeButton = new javax.swing.JButton();
         ExportScheduleButton = new javax.swing.JButton();
         ExitButton = new javax.swing.JButton();
+        HourlyRateButton = new javax.swing.JButton();
 
         setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         setPreferredSize(new java.awt.Dimension(1280, 960));
@@ -99,6 +100,14 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
             }
         });
 
+        HourlyRateButton.setFont(new java.awt.Font("Times New Roman", 0, 30)); // NOI18N
+        HourlyRateButton.setText("Hourly rate");
+        HourlyRateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HourlyRateButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,6 +115,8 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(49, 49, 49)
                                 .addComponent(ManagerNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(250, 250, 250)
+                                .addComponent(HourlyRateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(ManagerProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(42, 42, 42))
@@ -129,7 +140,8 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
                                 .addGap(29, 29, 29)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(ManagerNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(ManagerProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(ManagerProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(HourlyRateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(201, 201, 201)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(ManageWorkScheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,6 +184,10 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }
 
+    private void HourlyRateButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+    }
+
 
     // Variables declaration - do not modify
     private javax.swing.JButton ExitButton;
@@ -181,5 +197,6 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     private javax.swing.JButton ManageWorkScheduleButton;
     private javax.swing.JLabel ManagerNameLable;
     private javax.swing.JButton ManagerProfileButton;
+    private javax.swing.JButton HourlyRateButton;
     // End of variables declaration
 }
