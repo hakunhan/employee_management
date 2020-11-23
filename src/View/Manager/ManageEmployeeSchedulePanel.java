@@ -5,6 +5,7 @@
  */
 package View.Manager;
 
+import View.ViewUtils.*;
 import Controller.SwitchHomePagePanelController;
 
 import javax.swing.*;
@@ -73,6 +74,8 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         jTable1.getColumnModel().getColumn(0).setPreferredWidth(5);
         jTable1.getColumnModel().getColumn(9).setPreferredWidth(5);
         jTable1.setRowHeight(30);
+        jTable1.getColumn("Remove").setCellRenderer(new ButtonRenderer());
+        jTable1.getColumn("Remove").setCellEditor(new ButtonEditor(new JCheckBox()));
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
         for (int i = 0; i < 10; i++){

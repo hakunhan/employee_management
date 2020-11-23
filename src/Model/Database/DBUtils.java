@@ -143,7 +143,7 @@ public class DBUtils {
         Object[][] employeeSchedules = new Object[numberOfEmployee][8];
 
         for (int i = 0; i < numberOfEmployee; i++){
-            employeeSchedules[i] = scheduleSqlStatement.getScheduleEmployee(i+1);
+            employeeSchedules[i] = scheduleSqlStatement.getScheduleEmployeeWithId(i+1);
         }
 
         for (Object[] a: employeeSchedules){

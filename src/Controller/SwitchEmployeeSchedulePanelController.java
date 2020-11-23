@@ -2,7 +2,6 @@ package Controller;
 
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;
-import Model.Manager;
 import View.Manager.ManageEmployeeSchedulePanel;
 import View.Manager.ManagerFrame;
 
@@ -32,10 +31,11 @@ public class SwitchEmployeeSchedulePanelController {
             e.printStackTrace();
         }
 
-        Object[][] employeeSchedules = new Object[numberOfEmployee][8];
+        Object[][] employeeSchedules = new Object[numberOfEmployee][10];
 
         for (int i = 0; i < numberOfEmployee; i++){
-            employeeSchedules[i] = scheduleSqlStatement.getScheduleEmployee(i+1);
+            employeeSchedules[i] = scheduleSqlStatement.getScheduleEmployeeWithId(i+1);
+            employeeSchedules[i][9] = "\u00D8";
         }
 
         return employeeSchedules;
