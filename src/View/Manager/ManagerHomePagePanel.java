@@ -7,6 +7,8 @@ package View.Manager;
 
 import Controller.SwitchEmployeeSchedulePanelController;
 
+import javax.swing.*;
+
 /**
  *
  * @author HieuHoang
@@ -160,7 +162,10 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        if (JOptionPane.showConfirmDialog(null, "Are you sure want to exit?", "WARNING",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }
 
     private void ManageEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {

@@ -40,10 +40,12 @@ public class ButtonEditor extends DefaultCellEditor {
 
     public Object getCellEditorValue() {
         if (isPushed) {
-            //
-            //
-            JOptionPane.showMessageDialog(button, label + ": Ouch!");
-            // System.out.println(label + ": Ouch!");
+            if (JOptionPane.showConfirmDialog(null, "Are you sure want to delete employee schedule?", "WARNING",
+                    JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+
+            } else {
+
+            }
         }
         isPushed = false;
         return new String(label);

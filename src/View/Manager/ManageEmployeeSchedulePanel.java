@@ -48,7 +48,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1280, 960));
 
         AddScheduleButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        AddScheduleButton.setText("Add schedule");
+        AddScheduleButton.setText("Add employee to schedule");
         AddScheduleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddScheduleButtonActionPerformed(evt);
@@ -115,7 +115,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(AddScheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(AddScheduleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
