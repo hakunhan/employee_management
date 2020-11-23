@@ -1,0 +1,38 @@
+CREATE TABLE employee(
+id numeric(3) primary key not null,
+name varchar(30) not null,
+phoneNumber varchar(30) not null,
+address varchar(30) not null,
+dob DATE not null
+);
+
+CREATE TABLE account(
+employee_id numeric(3) not null,
+username varchar(30) not null,
+password varchar(30) not null,
+CONSTRAINT account_FK FOREIGN KEY (employee_id) REFERENCES employee(id)
+);
+
+CREATE TABLE schedule(
+employee_id numeric(3) not null,
+monday varchar(13),
+tuesday varchar(13),
+wednesday varchar(13),
+thursday varchar(13),
+friday varchar(13),
+saturday varchar(13),
+sunday varchar(13),
+CONSTRAINT schedule_FK FOREIGN KEY (employee_id) REFERENCES employee(id)
+);
+
+CREATE TABLE salary(
+hourlyRate decimal(3,2)
+);
+
+INSERT INTO employee VALUES (1, "Hiếu", "0963062140", "Hà Nội", "2000-03-21");
+INSERT INTO employee VALUES (2, "Long", "0987654321", "Hà Nội", "2000-04-22");
+
+INSERT INTO account VALUES (1, "0963062140", "1");
+
+INSERT INTO schedule VALUES (1, "13:00 - 19:00", "b", "c", "d", "e", "f", "g");
+INSERT INTO schedule VALUES (2, "19:00 - 22:00", "b2", "c2", "d2", "e2", "f2", "g2");
