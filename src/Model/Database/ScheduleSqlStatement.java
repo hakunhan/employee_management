@@ -85,10 +85,10 @@ public class ScheduleSqlStatement {
     }
 
     public String[] getScheduleEmployee(int employee_id){
-        String mysqlStatement = "SELECT employee.name, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM schedule INNER JOIN employee ON employee.id = schedule.employee_id WHERE employee_id=?;";
+        String mysqlStatement = "SELECT employee_id, employee.name, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM schedule INNER JOIN employee ON employee.id = schedule.employee_id WHERE employee_id=?;";
         int[] indexes = {1};
         String[] values = {Integer.toString(employee_id)};
-        String[] result = new String[8];
+        String[] result = new String[9];
 
         ResultSet employee_schedule = dbUtils.selectData(mysqlStatement,indexes,values);
         try{

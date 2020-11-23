@@ -5,18 +5,22 @@
  */
 package View.Manager;
 
+import Controller.SwitchHomePagePanelController;
+
 /**
  *
  * @author HieuHoang
  */
 public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
     private Object[][] employeeSchedule;
+    private ManagerFrame mainFrame;
 
     /**
      * Creates new form ManageEmployeeSchedulePanel
      */
-    public ManageEmployeeSchedulePanel(Object[][] employeeSchedule) {
+    public ManageEmployeeSchedulePanel(Object[][] employeeSchedule, ManagerFrame mainFrame) {
         this.employeeSchedule = employeeSchedule;
+        this.mainFrame = mainFrame;
         initComponents();
     }
 
@@ -37,7 +41,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         BackButton = new javax.swing.JButton();
 
         setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1280, 960));
 
         AddScheduleButton.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         AddScheduleButton.setText("Add schedule");
@@ -50,18 +54,31 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 employeeSchedule,
                 new String [] {
-                        "Name", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+                        "Id", "Name", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Remove"
                 }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                    java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                    false, false, true, true, true, true, true, true, true, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(5);
+            jTable1.getColumnModel().getColumn(9).setResizable(false);
+            jTable1.getColumnModel().getColumn(9).setPreferredWidth(5);
+        }
 
         jScrollPane2.setViewportView(jScrollPane1);
 
@@ -119,6 +136,11 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(mainFrame);
+        if (switchHomePagePanelController.getManagerHomePagePanel() == null){
+            throw new NullPointerException("HomePage Panel is null");
+        }
+        mainFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
     }
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {

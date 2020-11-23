@@ -31,7 +31,7 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1280, 960));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jButton1.setText("Add employee");
