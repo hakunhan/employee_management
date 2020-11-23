@@ -1,4 +1,4 @@
-package Database;
+package Model.Database;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -84,7 +84,27 @@ public class ScheduleSqlStatement {
         dbUtils.deleteData(mysqlStatement, indexes, values);
     }
 
-    public String[] getScheduleEmployee(int employee_id){
+    public String[] getScheduleEmployeeWithId(int employee_id){
+        String mysqlStatement = "SELECT employee_id, employee.name, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM schedule INNER JOIN employee ON employee.id = schedule.employee_id WHERE employee_id=?;";
+        int[] indexes = {1};
+        String[] values = {Integer.toString(employee_id)};
+        //add place for REMOVE button in view => result have 9 + 1 blank value
+        String[] result = new String[10];
+
+        ResultSet employee_schedule = dbUtils.selectData(mysqlStatement,indexes,values);
+        try{
+            while(employee_schedule.next()){
+                for (int i = 0; i < 9; i++)
+                    result[i] = employee_schedule.getString(i+1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return result;
+    }
+
+    public String[] getScheduleEmployeeWithOutId(int employee_id){
         String mysqlStatement = "SELECT employee.name, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM schedule INNER JOIN employee ON employee.id = schedule.employee_id WHERE employee_id=?;";
         int[] indexes = {1};
         String[] values = {Integer.toString(employee_id)};
@@ -111,7 +131,7 @@ public class ScheduleSqlStatement {
 
         //sqlStatement.updateMonday(1,"21:00");
 
-        String[] test = sqlStatement.getScheduleEmployee(1);
+        String[] test = sqlStatement.getScheduleEmployeeWithOutId(1);
 
         for(String a:test){
             System.out.print(a + " ");

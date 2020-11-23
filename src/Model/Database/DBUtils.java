@@ -1,4 +1,4 @@
-package Database;
+package Model.Database;
 
 import com.mysql.cj.jdbc.exceptions.NotUpdatable;
 
@@ -21,7 +21,7 @@ public class DBUtils {
     private void initialize(){
         Properties p = new Properties();
         try{
-            p.load(new FileInputStream("src\\Database\\database.properties"));
+            p.load(new FileInputStream("src\\Model\\Database\\database.properties"));
             url = p.getProperty("url");
             user = p.getProperty("user");
             password = p.getProperty("password");
@@ -127,14 +127,30 @@ public class DBUtils {
     public static void main(String[] args) {
         DBUtils utils = new DBUtils();
 
-        String mysqlCommand = "SELECT * FROM employee;";
-        ResultSet rs = utils.retrieveData(mysqlCommand);
-        try{
-            while (rs.next()){
-                System.out.println(rs.getString(1));
+        ScheduleSqlStatement scheduleSqlStatement = new ScheduleSqlStatement();
+        String statement = "SELECT COUNT(id) FROM employee;";
+        ResultSet countEmployee = utils.retrieveData(statement);
+        int numberOfEmployee = 0;
+
+        try {
+            if (countEmployee.next()){
+                numberOfEmployee = countEmployee.getInt(1);
             }
         }catch (SQLException e){
             e.printStackTrace();
+        }
+
+        Object[][] employeeSchedules = new Object[numberOfEmployee][8];
+
+        for (int i = 0; i < numberOfEmployee; i++){
+            employeeSchedules[i] = scheduleSqlStatement.getScheduleEmployeeWithId(i+1);
+        }
+
+        for (Object[] a: employeeSchedules){
+            for (Object b: a){
+                System.out.print(b + " ");
+            }
+            System.out.println();
         }
     }
 }

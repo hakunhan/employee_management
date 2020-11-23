@@ -38,13 +38,5 @@ public class Salary {
         return workHour * hourlyRate;
     }
 
-    public static void main(String[] args) throws IOException {
-        Salary s = new Salary(18);
-        ReadEmployeeExcelFile read = new ReadEmployeeExcelFile();
 
-        read.getMonthOfExcelFile();
-        Object[][] arr = read.employeeWorkInMonth("HÀ");
-
-        System.out.println(s.calculateSalary(arr));
-    }
 }
