@@ -1,4 +1,4 @@
-import jdk.jfr.Event;
+package functions.Login;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -65,7 +65,7 @@ public class ChangePassword extends JFrame {
                     System.out.println("Update password");
 
                     Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/account",
-                            "root", "hideonbush1969");
+                            "root", "aszxqw12");
 
                     Connection connection;
                     PreparedStatement st = (PreparedStatement) con.prepareStatement("Update account set password=? where name=?");

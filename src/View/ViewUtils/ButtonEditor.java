@@ -1,5 +1,7 @@
 package View.ViewUtils;
 
+import View.Manager.ManageEmployeeSchedulePanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,8 +14,14 @@ public class ButtonEditor extends DefaultCellEditor {
 
     private boolean isPushed;
 
-    public ButtonEditor(JCheckBox checkBox) {
+    private ManageEmployeeSchedulePanel schedulePanel;
+
+    private String message;
+
+    public ButtonEditor(JCheckBox checkBox, ManageEmployeeSchedulePanel schedulePanel, String message) {
         super(checkBox);
+        this.schedulePanel = schedulePanel;
+        this.message = message;
         button = new JButton();
         button.setOpaque(true);
         button.addActionListener(new ActionListener() {
@@ -40,9 +48,10 @@ public class ButtonEditor extends DefaultCellEditor {
 
     public Object getCellEditorValue() {
         if (isPushed) {
-            if (JOptionPane.showConfirmDialog(null, "Are you sure want to delete employee schedule?", "WARNING",
+            if (JOptionPane.showConfirmDialog(schedulePanel, message, "WARNING",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
 
+                schedulePanel.deleteEmployeeSchedule();
             } else {
 
             }

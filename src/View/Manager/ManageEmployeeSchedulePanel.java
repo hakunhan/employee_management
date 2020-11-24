@@ -5,8 +5,11 @@
  */
 package View.Manager;
 
+import Controller.Manager.AddEmployeeToScheduleController;
+import Controller.Manager.RemoveEmployeeScheduleController;
 import View.ViewUtils.*;
-import Controller.SwitchHomePagePanelController;
+import Controller.Manager.SwitchHomePagePanelController;
+import utils.NotPossibleException;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -17,14 +20,14 @@ import javax.swing.table.DefaultTableCellRenderer;
  */
 public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
     private Object[][] employeeSchedule;
-    private ManagerFrame mainFrame;
+    private ManagerFrame managerFrame;
 
     /**
      * Creates new form ManageEmployeeSchedulePanel
      */
-    public ManageEmployeeSchedulePanel(Object[][] employeeSchedule, ManagerFrame mainFrame) {
+    public ManageEmployeeSchedulePanel(Object[][] employeeSchedule, ManagerFrame managerFrame) {
         this.employeeSchedule = employeeSchedule;
-        this.mainFrame = mainFrame;
+        this.managerFrame = managerFrame;
         initComponents();
     }
 
@@ -75,12 +78,15 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         jTable1.getColumnModel().getColumn(9).setPreferredWidth(5);
         jTable1.setRowHeight(30);
         jTable1.getColumn("Remove").setCellRenderer(new ButtonRenderer());
-        jTable1.getColumn("Remove").setCellEditor(new ButtonEditor(new JCheckBox()));
+        jTable1.getColumn("Remove").setCellEditor(new ButtonEditor(new JCheckBox(),this,
+                "Are you sure want to delete this employee's schedule"));
+
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
         for (int i = 0; i < 10; i++){
             jTable1.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
         }
+
         jScrollPane1.setViewportView(jTable1);
 
         jScrollPane2.setViewportView(jScrollPane1);
@@ -135,19 +141,41 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
 
     private void AddScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        String s = (String) JOptionPane.showInputDialog(this, "Enter employee id","Add employee to schedule",
+                                                        JOptionPane.PLAIN_MESSAGE);
+        if (s == null){
+            return;
+        }
+        int employee_id = 0;
+        try{
+            employee_id = Integer.parseInt(s);
+            AddEmployeeToScheduleController addEmployeeToScheduleController = new AddEmployeeToScheduleController(managerFrame, employee_id);
+            managerFrame.setContentPane(addEmployeeToScheduleController.updateEmployeeSchedule());
+        }catch(NotPossibleException e){
+            JOptionPane.showMessageDialog(this, "Employee cant be added to schedule");
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Wrong employee id input!");
+        }
     }
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(mainFrame);
+        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
         if (switchHomePagePanelController.getManagerHomePagePanel() == null){
             throw new NullPointerException("HomePage Panel is null");
         }
-        mainFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
+        managerFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
     }
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    }
+
+    public void deleteEmployeeSchedule(){
+        int selectedRow = jTable1.getSelectedRow();
+        int employee_id = Integer.parseInt((String)employeeSchedule[selectedRow][0]);
+        RemoveEmployeeScheduleController removeEmployeeScheduleController = new RemoveEmployeeScheduleController(managerFrame, employee_id);
+        managerFrame.setJPanel(removeEmployeeScheduleController.updateEmployeeSchedule());
     }
 
 

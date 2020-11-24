@@ -84,6 +84,8 @@ public class ManagerFrame extends javax.swing.JFrame {
 
     public void setJPanel(JPanel jPanel){
         setContentPane(jPanel);
+        repaint();
+        revalidate();
         setVisible(true);
     }
 

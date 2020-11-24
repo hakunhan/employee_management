@@ -2,6 +2,8 @@ package Model.Database;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.ArrayList;
 
 public class ScheduleSqlStatement {
     private DBUtils dbUtils;
@@ -84,6 +86,22 @@ public class ScheduleSqlStatement {
         dbUtils.deleteData(mysqlStatement, indexes, values);
     }
 
+    public Object[] getEmployeeId(){
+        String sqlStatement = "SELECT employee_id FROM schedule;";
+        ArrayList<Integer> result = new ArrayList<>();
+        ResultSet employee_id = dbUtils.retrieveData(sqlStatement);
+
+        try{
+            while(employee_id.next()){
+                result.add(employee_id.getInt(1));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return result.toArray();
+    }
+
     public String[] getScheduleEmployeeWithId(int employee_id){
         String mysqlStatement = "SELECT employee_id, employee.name, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM schedule INNER JOIN employee ON employee.id = schedule.employee_id WHERE employee_id=?;";
         int[] indexes = {1};
@@ -121,20 +139,5 @@ public class ScheduleSqlStatement {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        ScheduleSqlStatement sqlStatement = new ScheduleSqlStatement();
-
-        String[] employee_schedule = {"a","b",null,"d", null,"f","g"};
-        //sqlStatement.insertIntoSchedule(1,employee_schedule);
-
-        //sqlStatement.updateMonday(1,"21:00");
-
-        String[] test = sqlStatement.getScheduleEmployeeWithOutId(1);
-
-        for(String a:test){
-            System.out.print(a + " ");
-        }
     }
 }

@@ -1,3 +1,5 @@
+package functions.Login;
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -94,7 +96,7 @@ public class userLogin extends JFrame {
                 String password = passwordField.getText();
                 try{
                     Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/account",
-                            "root", "hideonbush1969");
+                            "root", "aszxqw12");
                     PreparedStatement st = (PreparedStatement) connection.prepareStatement("Select name, password from account where name=? and password=?");
                     st.setString(1, userName);
                     st.setString(2, password);

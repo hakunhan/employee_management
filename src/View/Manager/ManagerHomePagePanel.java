@@ -5,7 +5,7 @@
  */
 package View.Manager;
 
-import Controller.SwitchEmployeeSchedulePanelController;
+import Controller.Manager.SwitchEmployeeSchedulePanelController;
 
 import javax.swing.*;
 
