@@ -1,16 +1,13 @@
-package Controller.Manager;
+package Controller.Manager.ManageWorkSchedule;
 
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
 import Model.Database.ScheduleSqlStatement;
-import Model.Employee;
 import View.Manager.ManageEmployeeSchedulePanel;
 import View.Manager.ManagerFrame;
 import utils.NotPossibleException;
 
 import javax.swing.*;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
 
 public class AddEmployeeToScheduleController {
     private ManageEmployeeSchedulePanel manageEmployeeSchedulePanel;

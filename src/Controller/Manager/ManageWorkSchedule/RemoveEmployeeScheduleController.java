@@ -1,4 +1,4 @@
-package Controller.Manager;
+package Controller.Manager.ManageWorkSchedule;
 
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;

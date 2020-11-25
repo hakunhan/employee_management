@@ -1,7 +1,6 @@
-package Controller.Manager;
+package Controller.Manager.ManageWorkSchedule;
 
 import Model.Database.DBUtils;
-import Model.Database.EmployeeSqlStatement;
 import Model.Database.ScheduleSqlStatement;
 import View.Manager.ManageEmployeeSchedulePanel;
 import View.Manager.ManagerFrame;
