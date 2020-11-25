@@ -36,9 +36,6 @@ public class DBUtils {
         if (connection == null){
             throw new NullPointerException("Connection is null");
         }
-        else {
-            System.out.println("Connected");
-        }
     }
 
     public void createStatement(){

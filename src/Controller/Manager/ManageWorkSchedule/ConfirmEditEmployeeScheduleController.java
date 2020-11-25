@@ -1,18 +1,19 @@
 package Controller.Manager.ManageWorkSchedule;
 
+import Controller.Manager.SwitchHomePagePanelController;
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;
 
-public class ConfirmEditEmployeeController {
+public class ConfirmEditEmployeeScheduleController {
     private  DBUtils database = new DBUtils();
     private ScheduleSqlStatement scheduleSqlStatement = new ScheduleSqlStatement();
     private ManagerFrame managerFrame;
     private Object[][] employeeSchedule;
 
-    public ConfirmEditEmployeeController(ManagerFrame managerFrame, Object[][] employeeSchedule){
+    public ConfirmEditEmployeeScheduleController(ManagerFrame managerFrame, Object[][] employeeSchedule){
         this.employeeSchedule = employeeSchedule;
         this.managerFrame = managerFrame;
     }
@@ -25,7 +26,7 @@ public class ConfirmEditEmployeeController {
         }
 
         for (int i = 0; i < employeeSchedule.length; i++){
-            for (int j = 2; j < 10; j++){
+            for (int j = 0; j < 6; j++){
                 if (this.employeeSchedule[i][j] != employeeSchedule[i][j])
                     employeeScheduleChange[i][j-1] = employeeSchedule[i][j];
             }

@@ -1,7 +1,5 @@
-import Controller.*;
 import Controller.Manager.SwitchHomePagePanelController;
 import View.Manager.*;
-import Model.*;
 
 import javax.swing.*;
 

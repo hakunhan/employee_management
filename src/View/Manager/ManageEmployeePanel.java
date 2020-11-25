@@ -5,16 +5,33 @@
  */
 package View.Manager;
 
+import Controller.Manager.ManageEmployee.ConfirmEditEmployeeController;
+import Controller.Manager.ManageEmployee.RemoveEmployeeController;
+import Controller.Manager.ManageWorkSchedule.AddEmployeeToScheduleController;
+import Controller.Manager.ManageWorkSchedule.RemoveEmployeeScheduleController;
+import View.ViewUtils.*;
+import Controller.Manager.SwitchHomePagePanelController;
+import utils.NotPossibleException;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author HieuHoang
  */
 public class ManageEmployeePanel extends javax.swing.JPanel {
+    private Object[][] employees;
+    private ManagerFrame managerFrame;
+    private ConfirmEditEmployeeController confirmEditEmployeeController;
 
     /**
-     * Creates new form ManageEmployeePanel
+     * Creates new form ManageEmployeeSchedulePanel
      */
-    public ManageEmployeePanel() {
+    public ManageEmployeePanel(ManagerFrame managerFrame, Object[][] employees) {
+        this.employees = employees;
+        this.managerFrame = managerFrame;
+        this.confirmEditEmployeeController = new ConfirmEditEmployeeController(managerFrame,employees);
         initComponents();
     }
 
@@ -27,78 +44,166 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        AddEmployeeButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        ConfirmButton = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
 
+        setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         setPreferredSize(new java.awt.Dimension(1280, 960));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        jButton1.setText("Add employee");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        AddEmployeeButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        AddEmployeeButton.setText("Add employee");
+        AddEmployeeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AddEmployeeButtonActionPerformed(evt);
             }
         });
 
+        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                new Object [][] {
-                        {null, null, null, null, null, null},
-                        {null, null, null, null, null, null},
-                        {null, null, null, null, null, null},
-                        {null, null, null, null, null, null}
-                },
+                employees,
                 new String [] {
-                        "Name", "Date of birth", "Phone number", "Address", "Edit", "Remove"
+                        "Id","Name", "Phone number", "Address", "Date of birth", "Remove"
                 }
         ) {
             Class[] types = new Class [] {
-                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+                    java.lang.Integer.class,java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(5);
+        jTable1.getColumnModel().getColumn(5).setPreferredWidth(5);
+        jTable1.setRowHeight(30);
+        jTable1.getColumn("Remove").setCellRenderer(new ButtonRenderer());
+        jTable1.getColumn("Remove").setCellEditor(new EmployeeButtonEditor(new JCheckBox(),this,
+                "Are you sure want to delete this employee"));
+
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        for (int i = 0; i < 6; i++){
+            jTable1.getColumnModel().getColumn(i).setCellRenderer(centerRenderer);
         }
+
+        jScrollPane1.setViewportView(jTable1);
+
+        jScrollPane2.setViewportView(jScrollPane1);
+
+        ConfirmButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        ConfirmButton.setText("Confirm");
+        ConfirmButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmButtonActionPerformed(evt);
+            }
+        });
+
+        BackButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
+        BackButton.setText("Back");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jScrollPane1)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(0, 637, Short.MAX_VALUE)
-                                                .addComponent(jButton1)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1369, Short.MAX_VALUE)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(ConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(AddEmployeeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(AddEmployeeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                                        .addComponent(BackButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(126, Short.MAX_VALUE))
+                                .addComponent(ConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(436, 436, 436))
         );
     }// </editor-fold>
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void AddEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        String s = (String) JOptionPane.showInputDialog(this, "Enter employee id","Add employee to schedule",
+                JOptionPane.PLAIN_MESSAGE);
+        if (s == null){
+            return;
+        }
+        int employee_id = 0;
+        try{
+            employee_id = Integer.parseInt(s);
+            AddEmployeeToScheduleController addEmployeeToScheduleController = new AddEmployeeToScheduleController(managerFrame, employee_id);
+            managerFrame.setContentPane(addEmployeeToScheduleController.updateEmployeeSchedule());
+        }catch(NotPossibleException e){
+            JOptionPane.showMessageDialog(this, "Employee cant be added to schedule");
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Wrong employee id input!");
+        }
+    }
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
+        if (switchHomePagePanelController.getManagerHomePagePanel() == null){
+            throw new NullPointerException("HomePage Panel is null");
+        }
+        managerFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
+    }
+
+    private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        if(JOptionPane.showConfirmDialog(null,"Confirm change?", "WARNING",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            if (confirmEditEmployeeController.updateAndReturnHomePage(employees) == null){
+                throw new NullPointerException("HomePage Panel is null");
+            }
+            Object[][] changedEmployees = new Object[jTable1.getRowCount()][6];
+
+            for(int i = 0; i < changedEmployees.length; i++){
+                for (int j = 0; j < 6; j++){
+                    changedEmployees[i][j] = jTable1.getValueAt(i,j);
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Successfully updated");
+            managerFrame.setContentPane(confirmEditEmployeeController.updateAndReturnHomePage(changedEmployees));
+        }
+    }
+
+    public void deleteEmployee(){
+        int selectedRow = jTable1.getSelectedRow();
+        int employee_id = Integer.parseInt((String)employees[selectedRow][0]);
+        RemoveEmployeeController removeEmployeeController = new RemoveEmployeeController(managerFrame, employee_id);
+        managerFrame.setJPanel(removeEmployeeController.updateEmployeeSchedule());
     }
 
 
     // Variables declaration - do not modify
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton AddEmployeeButton;
+    private javax.swing.JButton BackButton;
+    private javax.swing.JButton ConfirmButton;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     // End of variables declaration
 }

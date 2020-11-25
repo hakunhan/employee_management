@@ -25,8 +25,8 @@ public class EmployeeSalaryExcelPrinter {
      *  constructor that create excel .xlsx file and set rows height and columns width
      */
     public EmployeeSalaryExcelPrinter(String employeeName, ReadEmployeeExcelFile readEmployeeExcelFile) throws IOException {
-        this.employeeName = employeeName;
         this.readEmployeeExcelFile = readEmployeeExcelFile;
+        this.employeeName = employeeName;
         this.timetable = new File(employeeName + "-" + month + "-" + year +".xlsx");
 
         GetTime time = new GetTime();
@@ -62,7 +62,7 @@ public class EmployeeSalaryExcelPrinter {
         outputStream.close();
     }
 
-    public Object[][] calculateEmployeeWorkHours() throws IOException {
+    private Object[][] calculateEmployeeWorkHours() throws IOException {
         Object[][] employeeWorkInMonth = readEmployeeExcelFile.employeeWorkInMonth(this.employeeName);
         Object[][] result = new Object[employeeWorkInMonth.length][3];
         double totalTime = 0;
@@ -119,7 +119,7 @@ public class EmployeeSalaryExcelPrinter {
                 }
             }
 
-            for (int i = 2; i <= 2 +readEmployeeExcelFile.getEmployeeWorkDay() -1;i++){
+            for (int i = 2; i <= 2 +readEmployeeExcelFile.getEmployeeWorkDay() - 1;i++){
                 Row temp_row = sheet.getRow(i);
                 Cell temp_cell = temp_row.createCell(1);
                 temp_cell.setCellStyle(FormatCell.format(workbook));
@@ -127,7 +127,7 @@ public class EmployeeSalaryExcelPrinter {
                     temp_cell.setCellValue(employeeName);
                 }
             }
-            sheet.addMergedRegion(new CellRangeAddress(2, 2 + readEmployeeExcelFile.getEmployeeWorkDay()-1, 1,1));
+            sheet.addMergedRegion(new CellRangeAddress(2, 2 + readEmployeeExcelFile.getEmployeeWorkDay() -1, 1,1));
 
             //create a total hour cells in excel file that show the total hour that the employee work
             Row total_hour_row = sheet.createRow(++rowNum);
@@ -160,8 +160,8 @@ public class EmployeeSalaryExcelPrinter {
     }
 
     public static void main(String[] args) throws IOException {
-        ReadEmployeeExcelFile reader = new ReadEmployeeExcelFile();
-        EmployeeSalaryExcelPrinter printer = new EmployeeSalaryExcelPrinter("HÀ",reader);
+        ReadEmployeeExcelFile readEmployeeExcelFile = new ReadEmployeeExcelFile();
+        EmployeeSalaryExcelPrinter printer = new EmployeeSalaryExcelPrinter("HÀ",readEmployeeExcelFile);
         printer.printSalaryTable(18);
     }
 }

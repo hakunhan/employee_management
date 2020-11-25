@@ -10,10 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SwitchEmployeeSchedulePanelController {
-    private JPanel manageEmployeeSchedulePanel;
     private  DBUtils database = new DBUtils();
     private ManagerFrame frame;
     public SwitchEmployeeSchedulePanelController(ManagerFrame frame){
+        if (frame == null){
+            throw new NullPointerException("Frame is null");
+        }
         this.frame = frame;
     }
 
@@ -40,10 +42,6 @@ public class SwitchEmployeeSchedulePanelController {
         }
 
         return employeeSchedules;
-    }
-
-    public SwitchEmployeeSchedulePanelController(){
-        manageEmployeeSchedulePanel = new ManageEmployeeSchedulePanel(updateManageEmployeeSchedulePanel(), frame);
     }
 
     public JPanel getManageEmployeeSchedulePanel(){

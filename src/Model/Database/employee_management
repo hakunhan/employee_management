@@ -31,7 +31,7 @@ hourlyRate decimal(3,2)
 
 INSERT INTO employee VALUES (1, "Hiếu", "0963062140", "Hà Nội", "2000-03-21");
 INSERT INTO employee VALUES (2, "Long", "0987654321", "Hà Nội", "2000-04-22");
-INSERT INTO employee VALUES (3, "Hiếu2", "0964061990", "Hà Nội", "2000-09-12");
+INSERT INTO employee VALUES (3, "Hiếu Thứ 2", "0964061990", "Hà Nội", "2000-09-12");
 
 INSERT INTO account VALUES (1, "0963062140", "1");
 

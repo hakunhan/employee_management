@@ -14,8 +14,7 @@ public class EmployeeWorkTimeExcelPrinter {
     private Object[][] date  = new Object[10][8];
     private int currentDateIndex = 0;
 
-    private GetWorkTime workTime = new GetWorkTime();
-    private Object[][] memTime = new Object[10][8];
+    private Object[][] memTime;
     private int currentMemTimeIndex = 0;
 
     private GetTime time = new GetTime();
@@ -29,7 +28,8 @@ public class EmployeeWorkTimeExcelPrinter {
     /**
      *  constructor that create excel .xlsx file and set rows height and columns width
      */
-    public EmployeeWorkTimeExcelPrinter() throws IOException{
+    public EmployeeWorkTimeExcelPrinter(Object[][] memTime) throws IOException{
+        this.memTime = memTime;
         GetTime time = new GetTime();
         String month = time.getMonth();
         XSSFWorkbook workbook = new XSSFWorkbook();
@@ -65,26 +65,6 @@ public class EmployeeWorkTimeExcelPrinter {
     }
 
     /**
-     * add data to memTime
-     */
-    public Object[] setMemTime(Object[][] memTime) {
-        this.memTime = memTime;
-        for(int i = 0; i < workTime.getNumberOfEmployees(); i++){
-            this.memTime[currentMemTimeIndex][0] =this.memTime[currentMemTimeIndex][0].toString().toUpperCase();
-            currentMemTimeIndex++;
-        }
-
-        return this.memTime[currentMemTimeIndex];
-    }
-
-    /**
-     * set workTime to this workTime
-     */
-    public void setWorkTime(GetWorkTime workTime){
-        this.workTime = workTime;
-    }
-
-    /**
      * print date to excel file using date data
      */
     public void printDate() {
@@ -94,7 +74,7 @@ public class EmployeeWorkTimeExcelPrinter {
             XSSFSheet sheet = workbook.getSheetAt(0);
             
             Row row = sheet.createRow(rowNum++);
-            Object[] key = date[currentDateIndex - 1];
+            Object[] key = date[currentDateIndex-1];
             
             int cellNum = 0;
             for (Object obj : key) {
@@ -146,15 +126,10 @@ public class EmployeeWorkTimeExcelPrinter {
                         cell.setCellValue((Double) obj);
                 }
 
-                if(colorIndex < workTime.getNumberOfEmployees()) {
+                if(colorIndex < memTime.length) {
                     colorIndex++;
                 }else{
                     colorIndex = 0;
-                }
-
-                counter++;
-                if(counter >= workTime.getNumberOfEmployees()) {
-                    break;
                 }
             }
 

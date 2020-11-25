@@ -1,7 +1,5 @@
 package Model.Database;
 
-import Model.Salary;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -13,7 +11,7 @@ public class SalarySqlStatement {
     }
 
     public void insertIntoSalary(float hourlyRate){
-        String mysqlStatement = "INSERT INTO schedule VALUES(?);";
+        String mysqlStatement = "INSERT INTO salary VALUES(?);";
         int[] indexes = {1};
         String[] values = {Float.toString(hourlyRate)};
 
@@ -21,7 +19,7 @@ public class SalarySqlStatement {
     }
 
     public float getHourlyRate(){
-        String mysqlStatement = "SELECT * FROM hourlyRate;";
+        String mysqlStatement = "SELECT * FROM salary;";
         float result = 0;
         ResultSet hourlyRate = dbUtils.retrieveData(mysqlStatement);
 
@@ -37,9 +35,9 @@ public class SalarySqlStatement {
     }
 
     public void updateSalary(float hourlyRate){
-        String mysqlStatement = "UPDATE salary set hourlyRate = ?;";
-        int[] indexes = {1};
-        String[] values = {Float.toString(hourlyRate)};
+        String mysqlStatement = "UPDATE salary set hourlyRate = ? where hourlyRate = ?;";
+        int[] indexes = {1,2};
+        String[] values = {Float.toString(hourlyRate), Float.toString(getHourlyRate())};
 
         dbUtils.updateData(mysqlStatement,indexes,values);
     }

@@ -1,4 +1,4 @@
-package Controller.Manager.ManageWorkSchedule;
+package Controller.Manager;
 
 import Model.Database.DBUtils;
 import View.Manager.ManagerFrame;

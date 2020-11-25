@@ -1,5 +1,6 @@
 package View.ViewUtils;
 
+import View.Manager.ManageEmployeePanel;
 import View.Manager.ManageEmployeeSchedulePanel;
 
 import javax.swing.*;
@@ -7,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ButtonEditor extends DefaultCellEditor {
+public class EmployeeScheduleButtonEditor extends DefaultCellEditor {
     protected JButton button;
 
     private String label;
@@ -18,7 +19,7 @@ public class ButtonEditor extends DefaultCellEditor {
 
     private String message;
 
-    public ButtonEditor(JCheckBox checkBox, ManageEmployeeSchedulePanel schedulePanel, String message) {
+    public EmployeeScheduleButtonEditor(JCheckBox checkBox, ManageEmployeeSchedulePanel schedulePanel, String message) {
         super(checkBox);
         this.schedulePanel = schedulePanel;
         this.message = message;

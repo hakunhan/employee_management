@@ -5,8 +5,9 @@
  */
 package View.Manager;
 
-import Controller.Manager.AddEmployeeToScheduleController;
-import Controller.Manager.RemoveEmployeeScheduleController;
+import Controller.Manager.ManageWorkSchedule.AddEmployeeToScheduleController;
+import Controller.Manager.ManageWorkSchedule.ConfirmEditEmployeeScheduleController;
+import Controller.Manager.ManageWorkSchedule.RemoveEmployeeScheduleController;
 import View.ViewUtils.*;
 import Controller.Manager.SwitchHomePagePanelController;
 import utils.NotPossibleException;
@@ -21,6 +22,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
     private Object[][] employeeSchedule;
     private ManagerFrame managerFrame;
+    private ConfirmEditEmployeeScheduleController confirmEditEmployeeScheduleController;
 
     /**
      * Creates new form ManageEmployeeSchedulePanel
@@ -28,6 +30,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
     public ManageEmployeeSchedulePanel(Object[][] employeeSchedule, ManagerFrame managerFrame) {
         this.employeeSchedule = employeeSchedule;
         this.managerFrame = managerFrame;
+        this.confirmEditEmployeeScheduleController = new ConfirmEditEmployeeScheduleController(managerFrame,employeeSchedule);
         initComponents();
     }
 
@@ -39,7 +42,6 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
-
         AddScheduleButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -78,7 +80,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
         jTable1.getColumnModel().getColumn(9).setPreferredWidth(5);
         jTable1.setRowHeight(30);
         jTable1.getColumn("Remove").setCellRenderer(new ButtonRenderer());
-        jTable1.getColumn("Remove").setCellEditor(new ButtonEditor(new JCheckBox(),this,
+        jTable1.getColumn("Remove").setCellEditor(new EmployeeScheduleButtonEditor(new JCheckBox(),this,
                 "Are you sure want to delete this employee's schedule"));
 
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -169,6 +171,21 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        if(JOptionPane.showConfirmDialog(null,"Confirm change?", "WARNING",
+                JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            if (confirmEditEmployeeScheduleController.updateAndReturnHomePage(employeeSchedule) == null){
+                throw new NullPointerException("HomePage Panel is null");
+            }
+            Object[][] changedEmployeeSchedule = new Object[jTable1.getRowCount()][10];
+
+            for(int i = 0; i < changedEmployeeSchedule.length; i++){
+                for (int j = 0; j < 10; j++){
+                    changedEmployeeSchedule[i][j] = jTable1.getValueAt(i,j);
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Successfully updated");
+            managerFrame.setContentPane(confirmEditEmployeeScheduleController.updateAndReturnHomePage(changedEmployeeSchedule));
+        }
     }
 
     public void deleteEmployeeSchedule(){

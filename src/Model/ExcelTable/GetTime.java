@@ -18,7 +18,7 @@ public class GetTime {
 
 
     public GetTime(){
-        int lastDayOfMonth[] = {24,25,26,27,28,29,30,31};
+        int lastDayOfMonth[] = {31};
 
         for(int day : lastDayOfMonth){
             if(currentDate.getDayOfMonth() == day){

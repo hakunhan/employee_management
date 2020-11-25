@@ -140,4 +140,20 @@ public class ScheduleSqlStatement {
 
         return result;
     }
+
+    public Object[] getEmployeeInScheduleName(){
+        String sqlStatement = "SELECT employee.name FROM employee INNER JOIN schedule ON employee.id = schedule.employee_id";
+        ArrayList<String> result = new ArrayList<>();
+        ResultSet employee_name = dbUtils.retrieveData(sqlStatement);
+
+        try{
+            while(employee_name.next()){
+                result.add(employee_name.getString(1));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return result.toArray();
+    }
 }

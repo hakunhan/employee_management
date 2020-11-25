@@ -5,7 +5,11 @@
  */
 package View.Manager;
 
-import Controller.Manager.SwitchEmployeeSchedulePanelController;
+import Controller.Manager.Export.ExportSalaryController;
+import Controller.Manager.Export.ExportScheduleController;
+import Controller.Manager.HourlyRate.HourlyRateController;
+import Controller.Manager.ManageEmployee.SwitchManageEmployeePanelController;
+import Controller.Manager.ManageWorkSchedule.SwitchEmployeeSchedulePanelController;
 
 import javax.swing.*;
 
@@ -166,11 +170,17 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ExportSalaryButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        ExportSalaryController exportSalaryController = new ExportSalaryController();
+        exportSalaryController.exportEmployeeSalary();
+
+        JOptionPane.showMessageDialog(this, "Successfully exported");
     }
 
     private void ExportScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        ExportScheduleController exportScheduleController = new ExportScheduleController();
+        exportScheduleController.exportSchedule();
+
+        JOptionPane.showMessageDialog(this, "Successfully exported");
     }
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,11 +191,27 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ManageEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        SwitchManageEmployeePanelController switchManageEmployeePanelController = new SwitchManageEmployeePanelController(managerFrame);
+        managerFrame.setContentPane(switchManageEmployeePanelController.getManageEmployeePanel());
     }
 
     private void HourlyRateButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        HourlyRateController hourlyRateController = new HourlyRateController();
+        if(JOptionPane.showConfirmDialog(this, "The hourly rate is: " + hourlyRateController.getHourlyRate()
+                                    + "\n" + "Do you want to change the hourly rate", "Hourly rate", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            String s = JOptionPane.showInputDialog(this, "Enter new hourly rate: ");
+            if(s == null){
+                return;
+            }
+            float hourlyRate = 0;
+            try{
+                hourlyRate = Float.parseFloat(s);
+                hourlyRateController.updateHourlyRate(hourlyRate);
+                JOptionPane.showMessageDialog(this, "Successfully updated!");
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Wrong hourly rate input!");
+            }
+        }
     }
 
 
