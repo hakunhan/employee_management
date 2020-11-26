@@ -1,9 +1,8 @@
 package Controller.Manager.ManageEmployee;
 
-import Controller.Manager.SwitchHomePagePanelController;
+import Controller.Manager.SwitchManagerHomePagePanelController;
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
-import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;
@@ -66,7 +65,7 @@ public class ConfirmEditEmployeeController {
 
     public JPanel updateAndReturnHomePage(Object[][] employees){
         updateChange(employees);
-        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
-        return switchHomePagePanelController.getManagerHomePagePanel();
+        SwitchManagerHomePagePanelController switchManagerHomePagePanelController = new SwitchManagerHomePagePanelController(managerFrame);
+        return switchManagerHomePagePanelController.getManagerHomePagePanel();
     }
 }

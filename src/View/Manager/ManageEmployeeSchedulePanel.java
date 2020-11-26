@@ -8,9 +8,8 @@ package View.Manager;
 import Controller.Manager.ManageWorkSchedule.AddEmployeeToScheduleController;
 import Controller.Manager.ManageWorkSchedule.ConfirmEditEmployeeScheduleController;
 import Controller.Manager.ManageWorkSchedule.RemoveEmployeeScheduleController;
-import View.Employee.EmployeeFrame;
 import View.ViewUtils.*;
-import Controller.Manager.SwitchHomePagePanelController;
+import Controller.Manager.SwitchManagerHomePagePanelController;
 import utils.NotPossibleException;
 
 import javax.swing.*;
@@ -163,11 +162,11 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
-        if (switchHomePagePanelController.getManagerHomePagePanel() == null){
+        SwitchManagerHomePagePanelController switchManagerHomePagePanelController = new SwitchManagerHomePagePanelController(managerFrame);
+        if (switchManagerHomePagePanelController.getManagerHomePagePanel() == null){
             throw new NullPointerException("HomePage Panel is null");
         }
-        managerFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
+        managerFrame.setJPanel(switchManagerHomePagePanelController.getManagerHomePagePanel());
     }
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {

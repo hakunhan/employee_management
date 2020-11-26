@@ -111,6 +111,24 @@ public class EmployeeSqlStatement {
         return result.toArray();
     }
 
+    public String getEmployeeName(int employeeId){
+        String sqlStatement = "SELECT name FROM employee WHERE id = ?;";
+        int[] indexes = {1};
+        String[] values = {Integer.toString(employeeId)};
+        ResultSet employee_name = dbUtils.selectData(sqlStatement, indexes, values);
+        String employeeName = null;
+
+        try{
+            while(employee_name.next()){
+                employeeName = employee_name.getString(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return employeeName;
+    }
+
     public void deleteEmployee(int id){
         String sqlStatement = "DELETE FROM employee where id = ?;";
         int[] indexes = {1};

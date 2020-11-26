@@ -12,7 +12,7 @@ import javax.swing.*;
  * @author HieuHoang
  */
 public class EmployeeFrame extends javax.swing.JFrame {
-
+    private int employee_id;
     /**
      * Creates new form NewJFrame
      */
@@ -80,6 +80,13 @@ public class EmployeeFrame extends javax.swing.JFrame {
                 managerFrame.setVisible(true);
             }
         });
+    }
+    public void setEmployeeId(int employee_id){
+        this.employee_id = employee_id;
+    }
+
+    public int getEmployeeId(){
+        return employee_id;
     }
 
     public void setJPanel(JPanel jPanel){

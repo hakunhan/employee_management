@@ -1,6 +1,6 @@
 package Controller.Manager.ManageWorkSchedule;
 
-import Controller.Manager.SwitchHomePagePanelController;
+import Controller.Manager.SwitchManagerHomePagePanelController;
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;
 import View.Manager.ManagerFrame;
@@ -75,7 +75,7 @@ public class ConfirmEditEmployeeScheduleController {
 
     public JPanel updateAndReturnHomePage(Object[][] employeeSchedule){
         updateChange(employeeSchedule);
-        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
-        return switchHomePagePanelController.getManagerHomePagePanel();
+        SwitchManagerHomePagePanelController switchManagerHomePagePanelController = new SwitchManagerHomePagePanelController(managerFrame);
+        return switchManagerHomePagePanelController.getManagerHomePagePanel();
     }
 }

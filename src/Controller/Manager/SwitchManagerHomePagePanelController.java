@@ -1,17 +1,15 @@
 package Controller.Manager;
 
 import Model.Database.DBUtils;
-import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 import View.Manager.ManagerHomePagePanel;
 
 import javax.swing.*;
 
-public class SwitchHomePagePanelController {
-    private JPanel managerHomePagePanel;
+public class SwitchManagerHomePagePanelController {
     private DBUtils database = new DBUtils();
     private ManagerFrame frame;
-    public SwitchHomePagePanelController(ManagerFrame frame){
+    public SwitchManagerHomePagePanelController(ManagerFrame frame){
         if (frame == null){
             throw new NullPointerException("Frame is null");
         }

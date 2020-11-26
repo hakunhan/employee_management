@@ -10,7 +10,9 @@ import Controller.Manager.Export.ExportScheduleController;
 import Controller.Manager.HourlyRate.HourlyRateController;
 import Controller.Manager.ManageEmployee.SwitchManageEmployeePanelController;
 import Controller.Manager.ManageWorkSchedule.SwitchEmployeeSchedulePanelController;
+import Controller.utils.GetEmployeeName;
 import View.Manager.ManagerFrame;
+import View.Profile.ProfilePanel;
 
 import javax.swing.*;
 
@@ -19,6 +21,7 @@ import javax.swing.*;
  * @author HieuHoang
  */
 public class ManagerHomePagePanel extends javax.swing.JPanel {
+    private int employeeId;
     private ManagerFrame managerFrame;
 
     /**
@@ -26,6 +29,7 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
      */
     public ManagerHomePagePanel(ManagerFrame managerFrame) {
         this.managerFrame = managerFrame;
+        this.employeeId = managerFrame.getEmployee_id();
         initComponents();
     }
 
@@ -50,8 +54,9 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
         setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         setPreferredSize(new java.awt.Dimension(1280, 960));
 
+        GetEmployeeName getEmployeeName = new GetEmployeeName(employeeId);
         ManagerNameLable.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        ManagerNameLable.setText("Hello,");
+        ManagerNameLable.setText("Hello, " + getEmployeeName.getEmployeeName());
 
         ManagerProfileButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         ManagerProfileButton.setText("Profile");
@@ -161,7 +166,8 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void ManagerProfileButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        ProfilePanel profilePanel = new ProfilePanel(employeeId, managerFrame, this);
+        JOptionPane.showMessageDialog(this, profilePanel);
     }
 
     private void ManageWorkScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {

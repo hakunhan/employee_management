@@ -1,5 +1,7 @@
 package Model.Database;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
@@ -142,7 +144,7 @@ public class ScheduleSqlStatement {
     }
 
     public Object[] getEmployeeInScheduleName(){
-        String sqlStatement = "SELECT employee.name FROM employee INNER JOIN schedule ON employee.id = schedule.employee_id";
+        String sqlStatement = "SELECT employee.name FROM employee INNER JOIN schedule ON employee.id = schedule.employee_id;";
         ArrayList<String> result = new ArrayList<>();
         ResultSet employee_name = dbUtils.retrieveData(sqlStatement);
 
@@ -155,5 +157,23 @@ public class ScheduleSqlStatement {
         }
 
         return result.toArray();
+    }
+
+    public String getEmployeeName(int employee_id){
+        String sqlStatement = "SELECT employee.name FROM employee INNER JOIN schedule ON employee.id = schedule.employee_id WHERE employee_id = ?;";
+        int[] indexes = {1};
+        String[] values = {Integer.toString(employee_id)};
+
+        ResultSet employee_name = dbUtils.selectData(sqlStatement, indexes, values);
+        String result = null;
+        try{
+            while(employee_name.next()){
+                result = employee_name.getString(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return result;
     }
 }

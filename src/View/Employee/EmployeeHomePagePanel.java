@@ -5,7 +5,10 @@
  */
 package View.Employee;
 
+import Controller.Employee.Export.ExportEmployeeSalaryController;
 import Controller.Manager.Export.ExportScheduleController;
+import Controller.utils.GetEmployeeName;
+import View.Profile.ProfilePanel;
 
 import javax.swing.*;
 
@@ -14,11 +17,14 @@ import javax.swing.*;
  * @author HieuHoang
  */
 public class EmployeeHomePagePanel extends javax.swing.JPanel {
-
+    private int employeeId;
+    private EmployeeFrame employeeFrame;
     /**
      * Creates new form EmployeeHomePagePanel
      */
-    public EmployeeHomePagePanel() {
+    public EmployeeHomePagePanel(EmployeeFrame employeeFrame) {
+        this.employeeFrame = employeeFrame;
+        this.employeeId = employeeFrame.getEmployeeId();
         initComponents();
     }
 
@@ -40,8 +46,9 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1280, 960));
 
+        GetEmployeeName getEmployeeName = new GetEmployeeName(employeeId);
         ManagerNameLable.setFont(new java.awt.Font("Times New Roman", 0, 40)); // NOI18N
-        ManagerNameLable.setText("Hello,");
+        ManagerNameLable.setText("Hello, " + getEmployeeName.getEmployeeName());
 
         ManagerProfileButton.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         ManagerProfileButton.setText("Profile");
@@ -129,7 +136,8 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
     }// </editor-fold>
 
     private void ManagerProfileButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        ProfilePanel profilePanel = new ProfilePanel(employeeId, employeeFrame, this);
+        JOptionPane.showMessageDialog(this, profilePanel);
     }
 
     private void ExportScheduleButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +148,7 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ExportSalaryButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        ExportEmployeeSalaryController exportEmployeeSalaryController = new ExportEmployeeSalaryController(employeeId);
     }
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {

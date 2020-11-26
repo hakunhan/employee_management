@@ -7,9 +7,8 @@ package View.Manager;
 
 import Controller.Manager.ManageEmployee.ConfirmEditEmployeeController;
 import Controller.Manager.ManageEmployee.RemoveEmployeeController;
-import View.Employee.EmployeeFrame;
 import View.ViewUtils.*;
-import Controller.Manager.SwitchHomePagePanelController;
+import Controller.Manager.SwitchManagerHomePagePanelController;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -149,11 +148,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        SwitchHomePagePanelController switchHomePagePanelController = new SwitchHomePagePanelController(managerFrame);
-        if (switchHomePagePanelController.getManagerHomePagePanel() == null){
+        SwitchManagerHomePagePanelController switchManagerHomePagePanelController = new SwitchManagerHomePagePanelController(managerFrame);
+        if (switchManagerHomePagePanelController.getManagerHomePagePanel() == null){
             throw new NullPointerException("HomePage Panel is null");
         }
-        managerFrame.setJPanel(switchHomePagePanelController.getManagerHomePagePanel());
+        managerFrame.setJPanel(switchManagerHomePagePanelController.getManagerHomePagePanel());
     }
 
     private void ConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {
