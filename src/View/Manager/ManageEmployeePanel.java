@@ -145,21 +145,8 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     private void AddEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        String s = (String) JOptionPane.showInputDialog(this, "Enter employee id","Add employee to schedule",
-                JOptionPane.PLAIN_MESSAGE);
-        if (s == null){
-            return;
-        }
-        int employee_id = 0;
-        try{
-            employee_id = Integer.parseInt(s);
-            AddEmployeeToScheduleController addEmployeeToScheduleController = new AddEmployeeToScheduleController(managerFrame, employee_id);
-            managerFrame.setContentPane(addEmployeeToScheduleController.updateEmployeeSchedule());
-        }catch(NotPossibleException e){
-            JOptionPane.showMessageDialog(this, "Employee cant be added to schedule");
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(this, "Wrong employee id input!");
-        }
+        AddEmployeeOptionPane addEmployeeOptionPane = new AddEmployeeOptionPane(this);
+        addEmployeeOptionPane.addNewEmployee();
     }
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {

@@ -20,72 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/Export/ExportSalaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/Export/ExportScheduleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/HourlyRate/HourlyRateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageEmployee/ConfirmEditEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageEmployee/RemoveEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageEmployee/SwitchManageEmployeePanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/ViewUtils/EmployeeButtonEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageEmployee/AddEmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Database/AccountSqlStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/Manager/AddEmployeeOptionPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/AddEmployeeToScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/AddEmployeeToScheduleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/SwitchEmployeeSchedulePanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/SwitchEmployeeSchedulePanelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Authentication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Database/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Database/EmployeeSqlStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/Database/EmployeeSqlStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Database/SalarySqlStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/Database/SalarySqlStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Database/ScheduleSqlStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/Database/ScheduleSqlStatement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeWorkTimeExcelPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeWorkTimeExcelPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/GetTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/GetTime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/MySet$MySetGen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/MySet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Salary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Schedule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/employee_management.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/Database/employee_management" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/Database/employee_management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManagerHomePagePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/ViewUtils/ButtonEditor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/ViewUtils/ButtonEditor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/ViewUtils/ButtonEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/ViewUtils/ButtonEditor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/testRun.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/testRun.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/SwitchEmployeeSchedulePanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/SwitchEmployeeSchedulePanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/SwitchHomePagePanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Manager/SwitchHomePagePanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database/EmployeeSqlStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database/EmployeeSqlStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database/SalarySqlStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database/SalarySqlStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database/ScheduleSqlStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database/ScheduleSqlStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Database/employee_management" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Database/employee_management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeSalaryExcelPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeSalaryExcelPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeWorkTimeExcelPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeWorkTimeExcelPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/GetTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/GetTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/GetWorkTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Manager/ManageEmployeePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Manager/ManageEmployeePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Manager/ManageEmployeeSchedulePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Manager/ManageEmployeeSchedulePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Manager/ManagerFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Manager/ManagerFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Manager/ManagerHomePagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Manager/ManagerHomePagePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ViewUtils/ButtonEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewUtils/EmployeeScheduleButtonEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testRun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,26 +189,26 @@
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604316879580" />
     <state x="521" y="174" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1604827448836" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1606313049204">
+    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1606387663016">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1606313049204" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1606313049203">
+    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1606387663016" />
+    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1606387663015">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1606313049203" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1606313049203">
+    <state width="1493" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1606387663015" />
+    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1606387663015">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1606313049203" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1606313049203">
+    <state width="1493" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1606387663015" />
+    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1606387663015">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1606313049203" />
+    <state width="1493" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1606387663015" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1606276706637">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
