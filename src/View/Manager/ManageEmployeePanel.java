@@ -7,11 +7,9 @@ package View.Manager;
 
 import Controller.Manager.ManageEmployee.ConfirmEditEmployeeController;
 import Controller.Manager.ManageEmployee.RemoveEmployeeController;
-import Controller.Manager.ManageWorkSchedule.AddEmployeeToScheduleController;
-import Controller.Manager.ManageWorkSchedule.RemoveEmployeeScheduleController;
+import View.Employee.EmployeeFrame;
 import View.ViewUtils.*;
 import Controller.Manager.SwitchHomePagePanelController;
-import utils.NotPossibleException;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -145,7 +143,7 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     private void AddEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        AddEmployeeOptionPane addEmployeeOptionPane = new AddEmployeeOptionPane(this);
+        AddEmployeeOptionPane addEmployeeOptionPane = new AddEmployeeOptionPane(this, managerFrame);
         addEmployeeOptionPane.addNewEmployee();
     }
 

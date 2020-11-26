@@ -3,6 +3,7 @@ package Controller.Manager.ManageEmployee;
 import Controller.Manager.SwitchHomePagePanelController;
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;

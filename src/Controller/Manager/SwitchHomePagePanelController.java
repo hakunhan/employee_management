@@ -1,6 +1,7 @@
 package Controller.Manager;
 
 import Model.Database.DBUtils;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 import View.Manager.ManagerHomePagePanel;
 

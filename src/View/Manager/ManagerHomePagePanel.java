@@ -10,6 +10,7 @@ import Controller.Manager.Export.ExportScheduleController;
 import Controller.Manager.HourlyRate.HourlyRateController;
 import Controller.Manager.ManageEmployee.SwitchManageEmployeePanelController;
 import Controller.Manager.ManageWorkSchedule.SwitchEmployeeSchedulePanelController;
+import View.Manager.ManagerFrame;
 
 import javax.swing.*;
 
@@ -184,7 +185,7 @@ public class ManagerHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        if (JOptionPane.showConfirmDialog(null, "Are you sure want to exit?", "WARNING",
+        if (JOptionPane.showConfirmDialog(this, "Are you sure want to exit?", "WARNING",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             System.exit(0);
         }

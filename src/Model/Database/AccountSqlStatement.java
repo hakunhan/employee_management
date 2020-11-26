@@ -19,4 +19,11 @@ public class AccountSqlStatement {
         System.arraycopy(account_info, 0, values, 1, values.length - 1);
         dbUtils.insertData(mysqlStatement, indexes,values);
     }
+
+    public void deleteAccount(int employee_id){
+        String mysqlStatement = "DELETE FROM account WHERE employee_id = ?";
+        int[] indexes = {1};
+        String[] values = {Integer.toString(employee_id)};
+        dbUtils.deleteData(mysqlStatement,indexes,values);
+    }
 }

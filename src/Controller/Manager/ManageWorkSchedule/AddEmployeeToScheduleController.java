@@ -4,6 +4,7 @@ import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
 import Model.Database.ScheduleSqlStatement;
 import View.Manager.ManageEmployeeSchedulePanel;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 import utils.NotPossibleException;
 

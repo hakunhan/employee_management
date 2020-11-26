@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View.Manager;
-
-import View.Employee.EmployeeFrame;
+package View.Employee;
 
 import javax.swing.*;
 
@@ -13,12 +11,12 @@ import javax.swing.*;
  *
  * @author HieuHoang
  */
-public class ManagerFrame extends javax.swing.JFrame {
+public class EmployeeFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
-    public ManagerFrame() {
+    public EmployeeFrame() {
         initComponents();
     }
 

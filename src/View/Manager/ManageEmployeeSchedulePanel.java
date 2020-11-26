@@ -8,6 +8,7 @@ package View.Manager;
 import Controller.Manager.ManageWorkSchedule.AddEmployeeToScheduleController;
 import Controller.Manager.ManageWorkSchedule.ConfirmEditEmployeeScheduleController;
 import Controller.Manager.ManageWorkSchedule.RemoveEmployeeScheduleController;
+import View.Employee.EmployeeFrame;
 import View.ViewUtils.*;
 import Controller.Manager.SwitchHomePagePanelController;
 import utils.NotPossibleException;

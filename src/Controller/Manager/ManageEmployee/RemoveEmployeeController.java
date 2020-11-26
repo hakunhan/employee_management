@@ -1,8 +1,9 @@
 package Controller.Manager.ManageEmployee;
 
+import Model.Database.AccountSqlStatement;
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
-import Model.Database.ScheduleSqlStatement;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;
@@ -20,6 +21,8 @@ public class RemoveEmployeeController {
 
     private void removeEmployee(){
         EmployeeSqlStatement employeeSqlStatement = new EmployeeSqlStatement();
+        AccountSqlStatement accountSqlStatement = new AccountSqlStatement();
+        accountSqlStatement.deleteAccount(employee_id);
         employeeSqlStatement.deleteEmployee(employee_id);
     }
 

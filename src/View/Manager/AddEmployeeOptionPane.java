@@ -5,6 +5,9 @@
  */
 package View.Manager;
 
+import Controller.Manager.ManageEmployee.AddEmployeeController;
+import View.Employee.EmployeeFrame;
+
 import javax.swing.*;
 
 /**
@@ -13,10 +16,12 @@ import javax.swing.*;
  */
 public class AddEmployeeOptionPane extends javax.swing.JPanel {
     private JPanel mainPanel;
+    private ManagerFrame managerFrame;
     /**
      * Creates new form AddEmployeePanel
      */
-    public AddEmployeeOptionPane(JPanel mainPanel) {
+    public AddEmployeeOptionPane(JPanel mainPanel, ManagerFrame managerFrame) {
+        this.managerFrame = managerFrame;
         this.mainPanel = mainPanel;
         initComponents();
     }
@@ -200,14 +205,15 @@ public class AddEmployeeOptionPane extends javax.swing.JPanel {
         if (result == JOptionPane.OK_OPTION){
             String[] employeeInfo = new String[6];
 
-            employeeInfo[0] = username.getText();
-            employeeInfo[1] = password.getText();
-            employeeInfo[2] = name.getText();
-            employeeInfo[3] = phoneNumber.getText();
-            employeeInfo[4] = address.getText();
-            employeeInfo[5] = dob.getText();
+            employeeInfo[0] = inputEmployeeUserName.getText();
+            employeeInfo[1] = inputEmployeePassword.getText();
+            employeeInfo[2] = inputEmployeeName.getText();
+            employeeInfo[3] = inputEmployeePhoneNumber.getText();
+            employeeInfo[4] = inputEmployeeAddress.getText();
+            employeeInfo[5] = inputEmployeeDob.getText();
 
-
+            AddEmployeeController addEmployeeController = new AddEmployeeController(managerFrame, employeeInfo);
+            managerFrame.setJPanel(addEmployeeController.updateManageEmployee());
         }
     }
 

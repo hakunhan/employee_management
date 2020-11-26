@@ -3,6 +3,7 @@ package Controller.Manager.ManageEmployee;
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
 import View.Manager.ManageEmployeePanel;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;

@@ -2,6 +2,7 @@ package Controller.Manager.ManageWorkSchedule;
 
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;
+import View.Employee.EmployeeFrame;
 import View.Manager.ManagerFrame;
 
 import javax.swing.*;
