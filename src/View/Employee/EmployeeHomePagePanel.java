@@ -12,6 +12,7 @@ import Controller.utils.GetEmployeeName;
 import View.Profile.ProfilePanel;
 
 import javax.swing.*;
+import java.io.IOException;
 
 /**
  *
@@ -164,9 +165,14 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
 
     private void ShowThisMonthSalaryActionPerformed(java.awt.event.ActionEvent evt) {
         CalculateSalaryController calculateSalaryController = new CalculateSalaryController(employeeId);
-        float salary = calculateSalaryController.calculateEmployeeSalary();
+        try {
+            float salary = calculateSalaryController.calculateEmployeeSalary();
+            JOptionPane.showMessageDialog(this, "Your salary is: " + salary);
 
-        JOptionPane.showMessageDialog(this, "Your salary is: " + salary);
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Cannot calculate salary! (wrong file format)");
+        }
+
     }
 
 

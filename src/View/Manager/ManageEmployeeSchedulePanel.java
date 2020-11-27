@@ -179,7 +179,7 @@ public class ManageEmployeeSchedulePanel extends javax.swing.JPanel {
             Object[][] changedEmployeeSchedule = new Object[jTable1.getRowCount()][10];
 
             for(int i = 0; i < changedEmployeeSchedule.length; i++){
-                for (int j = 0; j < 10; j++){
+                for (int j = 0; j < 9; j++){
                     changedEmployeeSchedule[i][j] = jTable1.getValueAt(i,j);
                 }
             }

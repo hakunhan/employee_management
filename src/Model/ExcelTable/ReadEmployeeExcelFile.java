@@ -1,5 +1,6 @@
 package Model.ExcelTable;
 
+import org.apache.poi.POIXMLException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -23,7 +24,7 @@ public class ReadEmployeeExcelFile {
         getMonthOfExcelFile();
     }
 
-    public void chooseFile() {
+    private void chooseFile() {
         FileDialog dialog = new FileDialog((Frame) null, "Select File to Open",FileDialog.LOAD);
         dialog.setVisible(true);
         String file = dialog.getDirectory() + dialog.getFile();
@@ -31,15 +32,14 @@ public class ReadEmployeeExcelFile {
         this.filePath = file;
     }
 
-    public void getMonthOfExcelFile(){
+    private void getMonthOfExcelFile(){
         String[] temp = filePath.split("\\\\");
         String[] tempTwo = temp[temp.length-1].split("-");
         String result = gt.getMonthNum(tempTwo[0]);
-        System.out.println(result);
         this.month = result;
     }
 
-    public Object[] getDateInExcelFile(){
+    private Object[] getDateInExcelFile() throws IOException, POIXMLException{
         ArrayList<String> date = new ArrayList<>();
         try {
             FileInputStream file = new FileInputStream(new File(filePath));
@@ -67,16 +67,16 @@ public class ReadEmployeeExcelFile {
                     //Check the cell type and format accordingly
                     date.add(cell.getStringCellValue());
                 }
-                System.out.println("");
             }
             file.close();
         } catch (Exception e) {
             e.printStackTrace();
+            throw new POIXMLException();
         }
         return date.toArray();
     }
 
-    public Object[] getWorkTimeOfEmployee(String employeeName) throws IOException {
+    private Object[] getWorkTimeOfEmployee(String employeeName) throws IOException, POIXMLException {
         ArrayList<String> workTime = new ArrayList<>();
 
         try {
@@ -105,16 +105,16 @@ public class ReadEmployeeExcelFile {
                     //Check the cell type and format accordingly
                     workTime.add(cell.getStringCellValue());
                 }
-                System.out.println("");
             }
             file.close();
         } catch (Exception e) {
             e.printStackTrace();
+            throw new POIXMLException();
         }
         return workTime.toArray();
     }
 
-    public Object[][] employeeWorkInMonth(String employeeName) throws IOException {
+    public Object[][] employeeWorkInMonth(String employeeName) throws IOException, POIXMLException {
         Object[] date = getDateInExcelFile();
         Object[] workTime = getWorkTimeOfEmployee(employeeName);
         Object[][] temp = new Object[date.length][2];
@@ -126,7 +126,7 @@ public class ReadEmployeeExcelFile {
                 continue;
             }
 
-            if(e.toString().equals(" ")){
+            if(e.toString().equals(" ") || e.toString().trim().isEmpty() || e.toString() == null){
                 count++;
                 continue;
             }
@@ -149,23 +149,11 @@ public class ReadEmployeeExcelFile {
             result[resultCount][1] = a[1];
             resultCount++;
         }
-
         this.employeeWorkDay = resultCount;
         return result;
     }
 
     public int getEmployeeWorkDay(){
         return employeeWorkDay;
-    }
-
-    public static void main(String[] args) throws IOException {
-        ReadEmployeeExcelFile reader = new ReadEmployeeExcelFile();
-        Object[][] employeeWorkInMonth = reader.employeeWorkInMonth("HÀ");
-
-        for (Object[] a: employeeWorkInMonth){
-            for (Object b: a){
-                System.out.println(b);
-            }
-        }
     }
 }

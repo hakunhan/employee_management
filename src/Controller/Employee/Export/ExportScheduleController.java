@@ -11,19 +11,18 @@ import java.io.IOException;
 public class ExportScheduleController {
     private DBUtils dbUtils;
     private ScheduleSqlStatement scheduleSqlStatement;
-    private EmployeeSqlStatement employeeSqlStatement;
 
     public ExportScheduleController(){
         dbUtils = new DBUtils();
         scheduleSqlStatement = new ScheduleSqlStatement();
-        employeeSqlStatement = new EmployeeSqlStatement();
     }
 
     private int[] getEmployeeId(){
-        Object[] employeeId = employeeSqlStatement.getEmployeeId();
+        Object[] employeeId = scheduleSqlStatement.getEmployeeId();
         int[] result = new int[employeeId.length];
 
         for(int i = 0; i < result.length; i++){
+            System.out.println((int) employeeId[i]);
             result[i] = (int) employeeId[i];
         }
 

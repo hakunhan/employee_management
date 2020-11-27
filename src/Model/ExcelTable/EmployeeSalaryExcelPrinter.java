@@ -69,8 +69,8 @@ public class EmployeeSalaryExcelPrinter {
 
         int count = 0;
         for (Object[] _temp: employeeWorkInMonth){
-            if (_temp[0] == null || _temp[1] == null)
-                break;
+            if (_temp[0] == null || _temp[1] == null || _temp[1] == "")
+                continue;
 
             result[count][0] = _temp[0];
             result[count][1] = _temp[1];
@@ -120,7 +120,7 @@ public class EmployeeSalaryExcelPrinter {
                 }
             }
 
-            for (int i = 2; i <= 2 +readEmployeeExcelFile.getEmployeeWorkDay() - 1;i++){
+            for (int i = 2; i <= (2 +readEmployeeExcelFile.getEmployeeWorkDay()- 1);i++){
                 Row temp_row = sheet.getRow(i);
                 Cell temp_cell = temp_row.createCell(1);
                 temp_cell.setCellStyle(FormatCell.format(workbook));
@@ -128,7 +128,8 @@ public class EmployeeSalaryExcelPrinter {
                     temp_cell.setCellValue(employeeName);
                 }
             }
-            sheet.addMergedRegion(new CellRangeAddress(2, 2 + readEmployeeExcelFile.getEmployeeWorkDay() -1, 1,1));
+            if (readEmployeeExcelFile.getEmployeeWorkDay() > 1)
+                sheet.addMergedRegion(new CellRangeAddress(2, 2 + readEmployeeExcelFile.getEmployeeWorkDay() -1, 1,1));
 
             //create a total hour cells in excel file that show the total hour that the employee work
             Row total_hour_row = sheet.createRow(++rowNum);

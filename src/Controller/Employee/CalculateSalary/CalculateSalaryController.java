@@ -7,6 +7,7 @@ import Model.Database.ScheduleSqlStatement;
 import Model.ExcelTable.CalculateSalary;
 import Model.ExcelTable.EmployeeSalaryExcelPrinter;
 import Model.ExcelTable.ReadEmployeeExcelFile;
+import org.apache.poi.POIXMLException;
 
 import java.io.IOException;
 
@@ -27,17 +28,20 @@ public class CalculateSalaryController {
         return scheduleSqlStatement.getEmployeeName(employee_id);
     }
 
-    public float calculateEmployeeSalary(){
+    public float calculateEmployeeSalary() throws Exception {
         ReadEmployeeExcelFile readEmployeeExcelFile = new ReadEmployeeExcelFile();
         HourlyRateController hourlyRateController = new HourlyRateController();
         float hourlyRate = hourlyRateController.getHourlyRate();
         float salary = 0;
 
-        try{
+        try {
             CalculateSalary calculateSalary = new CalculateSalary(getEmployeeName(), readEmployeeExcelFile);
             salary = calculateSalary.calculateSalary(hourlyRate);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (POIXMLException e){
+            throw new Exception();
+
+        } catch (Exception e) {
+            throw new Exception("");
         }
 
         return salary;

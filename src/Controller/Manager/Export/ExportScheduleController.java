@@ -2,9 +2,7 @@ package Controller.Manager.Export;
 
 import Model.Database.DBUtils;
 import Model.Database.ScheduleSqlStatement;
-import Model.Database.EmployeeSqlStatement;
 import Model.ExcelTable.EmployeeWorkTimeExcelPrinter;
-import Model.ExcelTable.ReadEmployeeExcelFile;
 import Model.ExcelTable.GetTime;
 
 import java.io.IOException;
@@ -12,16 +10,14 @@ import java.io.IOException;
 public class ExportScheduleController {
     private DBUtils dbUtils;
     private ScheduleSqlStatement scheduleSqlStatement;
-    private EmployeeSqlStatement employeeSqlStatement;
 
     public ExportScheduleController(){
         dbUtils = new DBUtils();
         scheduleSqlStatement = new ScheduleSqlStatement();
-        employeeSqlStatement = new EmployeeSqlStatement();
     }
 
     private int[] getEmployeeId(){
-        Object[] employeeId = employeeSqlStatement.getEmployeeId();
+        Object[] employeeId = scheduleSqlStatement.getEmployeeId();
         int[] result = new int[employeeId.length];
 
         for(int i = 0; i < result.length; i++){

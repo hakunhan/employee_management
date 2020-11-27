@@ -2,6 +2,7 @@ package Model.ExcelTable;
 
 import java.io.*;
 
+import org.apache.poi.POIXMLException;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -24,7 +25,7 @@ public class CalculateSalary {
 
     }
 
-    public float calculateSalary(float hourlyRate) throws IOException {
+    public float calculateSalary(float hourlyRate) throws POIXMLException, IOException {
         Object[][] employeeWorkInMonth = readEmployeeExcelFile.employeeWorkInMonth(this.employeeName);
         Object[][] result = new Object[employeeWorkInMonth.length][3];
         float totalTime = 0;

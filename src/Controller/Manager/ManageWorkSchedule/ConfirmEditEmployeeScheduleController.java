@@ -21,12 +21,12 @@ public class ConfirmEditEmployeeScheduleController {
     private Object[][] getTheChange(Object[][] employeeSchedule){
         Object[][] employeeScheduleChange = new Object[employeeSchedule.length][8];
 
-        for (int i = 0; i < employeeSchedule.length; i++){
+        for (int i = 0; i < employeeScheduleChange.length; i++){
             employeeScheduleChange[i][0] = employeeSchedule[i][0];
         }
 
         for (int i = 0; i < employeeSchedule.length; i++){
-            for (int j = 0; j < 6; j++){
+            for (int j = 2; j < 9; j++){
                 if (this.employeeSchedule[i][j] != employeeSchedule[i][j])
                     employeeScheduleChange[i][j-1] = employeeSchedule[i][j];
             }
