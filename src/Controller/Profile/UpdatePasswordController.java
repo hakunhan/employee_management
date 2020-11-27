@@ -34,6 +34,8 @@ public class UpdatePasswordController {
         if (inputNewPassword == null){
             return false;
         }
+        System.out.println(inputNewPassword);
+
         accountSqlStatement.updatePassword(employee_id, inputNewPassword);
         return true;
     }

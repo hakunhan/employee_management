@@ -110,7 +110,7 @@ public class ChangePasswordPanel extends javax.swing.JPanel {
         return new String(inputNewPassword.getPassword()).equals(new String(inputConfirmPassword.getPassword()));
     }
 
-    public String updatePassword(){
+    public String validateUpdatePassword(){
         if (validateOldPassword() && validateNewPassword())
             return new String(inputNewPassword.getPassword());
         else

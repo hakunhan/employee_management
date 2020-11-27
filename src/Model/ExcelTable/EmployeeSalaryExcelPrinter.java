@@ -91,6 +91,7 @@ public class EmployeeSalaryExcelPrinter {
         return result;
     }
 
+
     public void printSalaryTable(double hourlyRate) throws IOException {
         Object[][] employeeWorkHours = calculateEmployeeWorkHours();
         try {
@@ -157,11 +158,5 @@ public class EmployeeSalaryExcelPrinter {
         } catch(IOException e){
                 e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        ReadEmployeeExcelFile readEmployeeExcelFile = new ReadEmployeeExcelFile();
-        EmployeeSalaryExcelPrinter printer = new EmployeeSalaryExcelPrinter("HÀ",readEmployeeExcelFile);
-        printer.printSalaryTable(18);
     }
 }

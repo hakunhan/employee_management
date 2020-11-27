@@ -5,6 +5,7 @@
  */
 package View.Employee;
 
+import Controller.Employee.CalculateSalary.CalculateSalaryController;
 import Controller.Employee.Export.ExportEmployeeSalaryController;
 import Controller.Manager.Export.ExportScheduleController;
 import Controller.utils.GetEmployeeName;
@@ -85,7 +86,7 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
         });
 
         ShowThisMonthSalary.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        ShowThisMonthSalary.setText("Show this month salary");
+        ShowThisMonthSalary.setText("Show salary");
         ShowThisMonthSalary.setPreferredSize(new java.awt.Dimension(300, 80));
         ShowThisMonthSalary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +150,9 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
 
     private void ExportSalaryButtonActionPerformed(java.awt.event.ActionEvent evt) {
         ExportEmployeeSalaryController exportEmployeeSalaryController = new ExportEmployeeSalaryController(employeeId);
+        exportEmployeeSalaryController.exportEmployeeSalary();
+
+        JOptionPane.showMessageDialog(this, "Successfully exported");
     }
 
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +163,10 @@ public class EmployeeHomePagePanel extends javax.swing.JPanel {
     }
 
     private void ShowThisMonthSalaryActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        CalculateSalaryController calculateSalaryController = new CalculateSalaryController(employeeId);
+        float salary = calculateSalaryController.calculateEmployeeSalary();
+
+        JOptionPane.showMessageDialog(this, "Your salary is: " + salary);
     }
 
 

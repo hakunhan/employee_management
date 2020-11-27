@@ -168,11 +168,12 @@ public class ProfilePanel extends javax.swing.JPanel {
         ChangePasswordPanel changePasswordPanel = new ChangePasswordPanel(employeeId);
         int option = JOptionPane.showConfirmDialog(panel, changePasswordPanel, "Confirm change?", JOptionPane.YES_NO_OPTION);
         if(option == JOptionPane.YES_OPTION){
-            String updatePassword = changePasswordPanel.updatePassword();
-            if (updatePassword == null){
+            String validateUpdatePassword = changePasswordPanel.validateUpdatePassword();
+            if (validateUpdatePassword == null){
                 JOptionPane.showMessageDialog(this, "Wrong password input");
             }else {
-                UpdatePasswordController updatePasswordController = new UpdatePasswordController(employeeId, updatePassword);
+                System.out.println(validateUpdatePassword);
+                UpdatePasswordController updatePasswordController = new UpdatePasswordController(employeeId, validateUpdatePassword);
                 updatePasswordController.updatePassword();
 
                 JOptionPane.showMessageDialog(this, "Successfully updated!");

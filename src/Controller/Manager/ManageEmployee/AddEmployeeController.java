@@ -36,11 +36,11 @@ public class AddEmployeeController {
 
     private void addEmployeeAndAccount(){
         String[] employeeInfo = new String[5];
-        String[] employeeAccount = new String[3];
+        String[] employeeAccount = new String[2];
         int employeeId = checkAvailableId();
         employeeInfo[0] = Integer.toString(employeeId);
         System.arraycopy(employee_info, 2, employeeInfo, 1, employeeInfo.length-1);
-        System.arraycopy(employeeInfo,0, employeeAccount, 1, employeeAccount.length-2);
+        System.arraycopy(employeeInfo,1, employeeAccount, 0, employeeAccount.length);
         employeeSqlStatement.insertIntoEmployee(employeeInfo);
         accountSqlStatement.insertIntoAccount(employeeId, employeeAccount);
     }

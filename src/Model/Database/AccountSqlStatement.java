@@ -23,9 +23,9 @@ public class AccountSqlStatement {
     public void updatePassword(int employee_id, String newPassword){
         String mysqlStatement = "UPDATE ACCOUNT SET PASSWORD = ? WHERE employee_id = ?;";
         int[] indexes = {1,2};
-        String[] values = {Integer.toString(employee_id), newPassword};
+        String[] values = {newPassword, Integer.toString(employee_id)};
 
-        dbUtils.updateData(mysqlStatement, indexes,values);
+        dbUtils.updateData(mysqlStatement, indexes, values);
     }
 
     public void deleteAccount(int employee_id){
