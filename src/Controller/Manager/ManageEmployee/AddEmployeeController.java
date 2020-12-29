@@ -25,12 +25,15 @@ public class AddEmployeeController {
 
         for (int i = 0; i < currentEmployeeId.length - 1; i++){
             if( (int) currentEmployeeId[i] + 1 != (int) currentEmployeeId[i+1]){
-                availableId = i+1;
+                availableId = (int) currentEmployeeId[i] + 1;
                 return availableId;
             }
         }
+        if((int) currentEmployeeId[currentEmployeeId.length-1] == 111)
+            availableId = 1;
+        else
+            availableId = (int) currentEmployeeId[currentEmployeeId.length-1] + 1;
 
-        availableId = (int) currentEmployeeId[currentEmployeeId.length-1] + 1;
         return availableId;
     }
 

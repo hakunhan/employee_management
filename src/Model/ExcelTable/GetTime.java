@@ -16,7 +16,6 @@ public class GetTime {
 
     private String dayOfMonth[] = {"MON", "TUE", "WED", "THURS", "FRID", "SAT", "SUN"};
 
-
     public GetTime(){
         int lastDayOfMonth[] = {31};
 

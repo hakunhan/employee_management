@@ -79,7 +79,10 @@ public class EmployeeSalaryExcelPrinter {
             Object[] beginShiftWork = shiftWork[0].toString().split(":");
             Object[] endShiftWork = shiftWork[1].toString().split(":");
             double beginTime = Float.parseFloat(beginShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
-            double endTime = Float.parseFloat(endShiftWork[0].toString().trim()) + Float.parseFloat(beginShiftWork[1].toString().trim())/60;
+            double endTime = Float.parseFloat(endShiftWork[0].toString().trim()) + Float.parseFloat(endShiftWork[1].toString().trim())/60;
+
+            if(endTime < beginTime)
+                endTime += 24;
 
             totalTime += endTime - beginTime;
             result[count][2] = endTime - beginTime;
