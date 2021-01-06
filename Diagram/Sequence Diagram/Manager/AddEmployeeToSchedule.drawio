@@ -1,1 +1,142 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T13:30:17.666Z" agent="5.0 (Windows)" version="14.1.8" etag="b5H76-8rqlz-nC965BaU" type="github"><diagram id="64tL-TkNs5o8Q_5HRvi4">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-06T13:45:14.923Z" agent="5.0 (Windows)" etag="58vLGdLyLb9YR6bRdpM_" version="14.1.8" type="github">
+  <diagram id="64tL-TkNs5o8Q_5HRvi4" name="Page-1">
+    <mxGraphModel dx="723" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-40" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="690" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-41" value="ManageSchedule&#xa;View" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="100" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-42" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="UvO2EIgONNnJVA2cI3H8-41">
+          <mxGeometry x="45" y="70" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-43" value="AddEmployeePopup()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="UvO2EIgONNnJVA2cI3H8-41" source="UvO2EIgONNnJVA2cI3H8-42" target="UvO2EIgONNnJVA2cI3H8-42">
+          <mxGeometry x="-0.12" y="14" relative="1" as="geometry">
+            <mxPoint x="-70" y="155" as="sourcePoint" />
+            <mxPoint x="180" y="175" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110" y="140" />
+              <mxPoint x="110" y="155" />
+            </Array>
+            <mxPoint x="-4" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-51" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="UvO2EIgONNnJVA2cI3H8-41">
+          <mxGeometry x="45" y="200" width="10" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-44" value="AddEmployee&#xa;ToSchedule&#xa;Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;size=50;" vertex="1" parent="1">
+          <mxGeometry x="420" y="90" width="100" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-45" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="UvO2EIgONNnJVA2cI3H8-44">
+          <mxGeometry x="45" y="210" width="10" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-46" value="click on add employee to schedule button" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-50" target="UvO2EIgONNnJVA2cI3H8-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="185" y="570" as="sourcePoint" />
+            <mxPoint x="310" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-47" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-48" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="90" width="100" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-49" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="UvO2EIgONNnJVA2cI3H8-48">
+          <mxGeometry x="45" y="220" width="10" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-50" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="160" width="10" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-52" value="addEmployeeIDAndConfirm" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" target="UvO2EIgONNnJVA2cI3H8-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="330" as="sourcePoint" />
+            <mxPoint x="255" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-54" value="addEmployeeToSchedule()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-45" target="UvO2EIgONNnJVA2cI3H8-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="400" as="sourcePoint" />
+            <mxPoint x="690" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="565" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-55" value="true" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-49" target="UvO2EIgONNnJVA2cI3H8-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="280" as="targetPoint" />
+            <mxPoint x="350" y="300" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="580" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-56" value="updateManageSchedule()" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-45" target="UvO2EIgONNnJVA2cI3H8-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="450" as="targetPoint" />
+            <mxPoint x="520" y="450" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="415" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-57" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="490" as="sourcePoint" />
+            <mxPoint x="685" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-58" value="false" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="520" as="targetPoint" />
+            <mxPoint x="685" y="520" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="580" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-59" value="addEmployeeFailedPopup()" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-45" target="UvO2EIgONNnJVA2cI3H8-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="560" as="targetPoint" />
+            <mxPoint x="510.0000000000002" y="539.5" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="460" y="539.5" />
+              <mxPoint x="390" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-60" value="Alt" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-61" value="[added success]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="425" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-62" value="[added fail]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="500" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UvO2EIgONNnJVA2cI3H8-63" value="employeeID" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;entryX=-0.055;entryY=0.214;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UvO2EIgONNnJVA2cI3H8-51" target="UvO2EIgONNnJVA2cI3H8-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="430" as="targetPoint" />
+            <mxPoint x="685" y="430" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="420" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
