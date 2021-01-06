@@ -35,7 +35,7 @@ CREATE TABLE salary(
 hourlyRate decimal(3,2)
 );
 
-INSERT INTO employee VALUES (1111, "Hiếu", "0963062140", "Hà Nội", "2000-03-21");
+INSERT INTO employee VALUES (111, "Hiếu", "0963062140", "Hà Nội", "2000-03-21");
 INSERT INTO employee VALUES (2, "Long", "0987654321", "Hà Nội", "2000-04-22");
 
 INSERT INTO account VALUES (111, "0963062140", "1");
