@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T10:51:18.635Z" agent="5.0 (Windows)" etag="LNW-EbDvIz4LMQlDn545" version="14.1.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-06T10:51:35.565Z" agent="5.0 (Windows)" etag="D2Py_jURE6AXrxReJSrJ" version="14.1.8" type="github">
   <diagram id="5uT8dm61a1b_Dk0GXY2D" name="Page-1">
     <mxGraphModel dx="923" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,7 +16,7 @@
         <mxCell id="bG4xbo2p4vwZnYhVoT0--4" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="bG4xbo2p4vwZnYhVoT0--3">
           <mxGeometry x="45" y="80" width="10" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="bG4xbo2p4vwZnYhVoT0--5" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="bG4xbo2p4vwZnYhVoT0--5" value="Employee" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="50" y="70" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="bG4xbo2p4vwZnYhVoT0--6" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
