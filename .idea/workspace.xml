@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="project_SED:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,14 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Diagram/Analysis Model -  Sequence Diagram.vpp.bak_002d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/a-NOVEMBER-2020.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Login/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Login/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Login/LoginCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageEmployee/AddEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageEmployee/AddEmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageEmployee/SwitchManageEmployeePanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageEmployee/SwitchManageEmployeePanelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/GetTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/GetTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/ReadEmployeeExcelFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/ReadEmployeeExcelFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Profile/UpdateProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Profile/UpdateProfileController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>

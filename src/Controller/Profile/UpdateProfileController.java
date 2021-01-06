@@ -3,7 +3,7 @@ package Controller.Profile;
 import Model.Database.DBUtils;
 import Model.Database.EmployeeSqlStatement;
 
-public class UpdateProfileController {
+public class    UpdateProfileController {
     private DBUtils dbUtils;
     private EmployeeSqlStatement employeeSqlStatement;
     private int employee_id;

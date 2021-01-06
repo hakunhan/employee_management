@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="project_SED:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/project_SED_jar</output-path>
+    <root id="archive" name="project_SED.jar">
+      <element id="module-output" name="project_SED" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/poi-ooxml-schemas-3.11-beta2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/poi-ooxml-3.12-20150511.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/poi-3.12-20150511.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/g-wiz-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/externalLib/mysql-connector-java-8.0.22.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
