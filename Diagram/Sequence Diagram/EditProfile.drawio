@@ -1,1 +1,124 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T09:06:03.403Z" agent="5.0 (X11)" version="14.1.8" etag="p53pgbEHuOA9HKnIoZXU" type="github"><diagram id="ElF4qJolztQHoGr6_O3O">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-06T09:22:18.325Z" agent="5.0 (X11)" etag="4kMW7AZUJPnhyghfnMSD" version="14.1.8" type="github">
+  <diagram id="ElF4qJolztQHoGr6_O3O" name="Page-1">
+    <mxGraphModel dx="981" dy="554" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-1" value="Employee&#xa;ProfileView" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="110" width="100" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="qDDd-fXYaBLIhmUHrQQN-1">
+          <mxGeometry x="45" y="70" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-19" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="qDDd-fXYaBLIhmUHrQQN-1">
+          <mxGeometry x="45" y="280" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-3" value="ProfileController" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="110" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-4" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="qDDd-fXYaBLIhmUHrQQN-3">
+          <mxGeometry x="45" y="70" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-21" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="qDDd-fXYaBLIhmUHrQQN-3">
+          <mxGeometry x="45" y="275" width="10" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-5" value="Employee" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-6" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="110" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-7" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="qDDd-fXYaBLIhmUHrQQN-6">
+          <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-8" value="click on edit profile button" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-9" target="qDDd-fXYaBLIhmUHrQQN-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="560" as="sourcePoint" />
+            <mxPoint x="200" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-9" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="190" width="10" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-10" value="new EditPanel()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-2" target="qDDd-fXYaBLIhmUHrQQN-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="560" as="sourcePoint" />
+            <mxPoint x="300" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-11" value="getEmployeeInfo()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-4" target="qDDd-fXYaBLIhmUHrQQN-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="280" as="sourcePoint" />
+            <mxPoint x="495" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-12" value="employeeInfo" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-7" target="qDDd-fXYaBLIhmUHrQQN-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="560" as="targetPoint" />
+            <mxPoint x="420" y="580" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="410" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-13" value="EditProfilePopupPanel" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-4" target="qDDd-fXYaBLIhmUHrQQN-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="310" as="targetPoint" />
+            <mxPoint x="350" y="310" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="255" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-14" value="edit profile" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="40" y="420" as="sourcePoint" />
+            <mxPoint x="195" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-22" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="380" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-24" value="updateProfile()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-19" target="qDDd-fXYaBLIhmUHrQQN-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="460" as="sourcePoint" />
+            <mxPoint x="350" y="460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="305" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-25" value="updateProfile()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-21" target="qDDd-fXYaBLIhmUHrQQN-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="355" y="450" as="sourcePoint" />
+            <mxPoint x="495" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="455" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qDDd-fXYaBLIhmUHrQQN-26" value="EditSuccessPopup" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;exitX=0;exitY=0.714;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qDDd-fXYaBLIhmUHrQQN-21" target="qDDd-fXYaBLIhmUHrQQN-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="510" as="targetPoint" />
+            <mxPoint x="340" y="510" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="260" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
