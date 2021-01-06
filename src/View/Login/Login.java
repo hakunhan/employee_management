@@ -5,7 +5,7 @@
  */
 package View.Login;
 
-import Controller.Login.LoginCheck;
+import Controller.Login.AuthenticationController;
 
 import javax.swing.*;
 
@@ -132,8 +132,8 @@ public class Login extends javax.swing.JFrame {
         String loginUsername = inputUsername.getText();
         String loginPassword = new String(inputPassword.getPassword());
 
-        LoginCheck loginCheck = new LoginCheck(loginUsername, loginPassword, this);
-        JFrame selectedFrame = loginCheck.getFrame();
+        AuthenticationController authenticationController = new AuthenticationController(loginUsername, loginPassword, this);
+        JFrame selectedFrame = authenticationController.getFrame();
 
         this.setVisible(false);
         selectedFrame.setVisible(true);

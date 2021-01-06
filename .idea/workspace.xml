@@ -20,34 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ea98f4d-bcdc-4a34-8928-1204a99890de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/a-NOVEMBER-2020.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Diagram/Analysis Model -  Sequence Diagram.vpp.bak_002d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Employee/CalculateSalary/CalculateSalaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Employee/CalculateSalary/CalculateSalaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Employee/Export/ExportScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Employee/Export/ExportScheduleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/Export/ExportScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/Export/ExportScheduleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeScheduleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/CalculateSalary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/CalculateSalary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/EmployeeSalaryExcelPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/ReadEmployeeExcelFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/Model/ExcelTable/ReadEmployeeExcelFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Employee/EmployeeHomePagePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/project_SED/View/Manager/ManageEmployeeSchedulePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Employee/CalculateSalary/CalculateSalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Employee/CalculateSalary/CalculateSalaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Employee/Export/ExportScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Employee/Export/ExportScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Manager/Export/ExportScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Manager/Export/ExportScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Manager/ManageWorkSchedule/ConfirmEditEmployeeScheduleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/CalculateSalary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/CalculateSalary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeSalaryExcelPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/EmployeeSalaryExcelPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ExcelTable/ReadEmployeeExcelFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ExcelTable/ReadEmployeeExcelFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Employee/EmployeeHomePagePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Employee/EmployeeHomePagePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Manager/ManageEmployeeSchedulePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Manager/ManageEmployeeSchedulePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hiếu-NOVEMBER-2020.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Long-NOVEMBER-2020.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOVEMBER-2020.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a-NOVEMBER-2020.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Login/LoginCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Login/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Login/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +62,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Employee" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -187,91 +168,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="549" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1606398433490">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="488" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1604324378797" />
-    <state x="549" y="129" key="#com.intellij.ide.util.MemberChooser/0.40.1536.824@0.40.1536.824" timestamp="1606398433490" />
-    <state x="551" y="343" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606186503341">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="551" y="343" width="433" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.40.1536.824@0.40.1536.824" timestamp="1606186503341" />
-    <state x="271" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606393198661">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="271" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.1536.824@0.40.1536.824" timestamp="1606393198661" />
-    <state x="499" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606268229288">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="499" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1536.824@0.40.1536.824" timestamp="1606268229288" />
-    <state x="521" y="174" key="FileChooserDialogImpl" timestamp="1604827448836">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604316879580" />
-    <state x="521" y="174" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1604827448836" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom" timestamp="1606442373614">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1606442373614" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center" timestamp="1606442373614">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1606442373614" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left" timestamp="1606442373614">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1606442373614" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right" timestamp="1606442373614">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604325106660" />
-    <state width="1493" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1606442373614" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1606441781094">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.40.1536.824@0.40.1536.824" timestamp="1606441781094" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1606441781093">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.40.1536.824@0.40.1536.824" timestamp="1606441781093" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1606441781093">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.40.1536.824@0.40.1536.824" timestamp="1606441781093" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1606441781094">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.40.1536.824@0.40.1536.824" timestamp="1606441781094" />
-    <state x="349" y="195" key="IDE.errors.dialog" timestamp="1604920475722">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="349" y="195" key="IDE.errors.dialog/0.40.1536.824@0.40.1536.824" timestamp="1604920475722" />
-    <state x="183" y="40" key="SettingsEditor" timestamp="1606389887720">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1604316889418" />
-    <state x="183" y="40" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1606389887720" />
-    <state x="584" y="230" key="chooseDestDirectoryDialog" timestamp="1605578562577">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="584" y="230" key="chooseDestDirectoryDialog/0.40.1536.824@0.40.1536.824" timestamp="1605578562577" />
-    <state x="315" y="188" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606102513581">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="315" y="188" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.40.1536.824@0.40.1536.824" timestamp="1606102513581" />
-    <state x="292" y="180" width="1124" height="810" key="dock-window-1" timestamp="1604382819195">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="292" y="180" width="1124" height="810" key="dock-window-1/0.40.1536.824@0.40.1536.824" timestamp="1604382819195" />
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1604971564174">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.40.1536.824@0.40.1536.824" timestamp="1604971564174" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

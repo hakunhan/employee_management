@@ -11,7 +11,7 @@ import utils.NotPossibleException;
 
 import javax.swing.*;
 
-public class LoginCheck {
+public class AuthenticationController {
     private DBUtils dbUtils;
     private AccountSqlStatement accountSqlStatement;
     private Login loginFrame;
@@ -19,7 +19,7 @@ public class LoginCheck {
     private String loginPassword;
     private int employee_id;
 
-    public LoginCheck(String loginUsername, String loginPassword, Login loginFrame){
+    public AuthenticationController(String loginUsername, String loginPassword, Login loginFrame){
         this.loginFrame = loginFrame;
         this.loginUsername = loginUsername;
         this.loginPassword = loginPassword;
@@ -27,7 +27,7 @@ public class LoginCheck {
         accountSqlStatement = new AccountSqlStatement();
     }
 
-    private int checkRole(){
+    private int authenticate(){
         int _employee_id = accountSqlStatement.getIdAccount(loginUsername,loginPassword);
         if (_employee_id == 0){
             JOptionPane.showMessageDialog(loginFrame, "Wrong username/password!");
@@ -42,15 +42,12 @@ public class LoginCheck {
         else if(employee_id == 111){
             return 1;
         }
-        else if(employee_id == 999){
-            return 2;
-        }
 
         return -1;
     }
 
     public JFrame getFrame(){
-        int result = checkRole();
+        int result = authenticate();
         switch (result){
             case 0:
                 EmployeeFrame employeeFrame = new EmployeeFrame();
@@ -64,14 +61,12 @@ public class LoginCheck {
                 SwitchManagerHomePagePanelController switchManagerHomePagePanelController = new SwitchManagerHomePagePanelController(managerFrame);
                 managerFrame.setJPanel(switchManagerHomePagePanelController.getManagerHomePagePanel());
                 return managerFrame;
-            case 2:
-                break;
             case -1:
                 break;
             default:
-                throw new NotPossibleException("Oof");
+                throw new NotPossibleException("Error");
         }
 
-        throw new NotPossibleException("Wat a noob!");
+        throw new NotPossibleException("Error");
     }
 }
