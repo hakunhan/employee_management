@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T13:52:42.571Z" agent="5.0 (Windows)" version="14.1.8" etag="DNO4y8ubDT008pJsemLC" type="github"><diagram id="aEvCOSDKhLHYsJhW686T">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-06T13:53:33.659Z" agent="5.0 (Windows)" etag="Q0Uq8L8tQ6fWD7Il1asN" version="14.1.8" type="github">
+  <diagram id="aEvCOSDKhLHYsJhW686T" name="Page-1">
+    <mxGraphModel dx="868" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-1" value="ManagerHome&#xa;PageView" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="100" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="dKRTgPM4jX6CAK4NP_HR-1">
+          <mxGeometry x="45" y="70" width="10" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-3" value="Manager&#xa;Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="100" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-4" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="dKRTgPM4jX6CAK4NP_HR-3">
+          <mxGeometry x="45" y="80" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-5" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-6" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="80" width="100" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-7" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="dKRTgPM4jX6CAK4NP_HR-6">
+          <mxGeometry x="45" y="100" width="10" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-8" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-9" value="click on manage employee button" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="dKRTgPM4jX6CAK4NP_HR-8" target="dKRTgPM4jX6CAK4NP_HR-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="560" as="sourcePoint" />
+            <mxPoint x="300" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-10" value="new SwitchManageScheduelPanelController()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="dKRTgPM4jX6CAK4NP_HR-2" target="dKRTgPM4jX6CAK4NP_HR-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="195" y="229.5" as="sourcePoint" />
+            <mxPoint x="420" y="229.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-11" value="click on manage scheduel button" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="190" as="sourcePoint" />
+            <mxPoint x="295" y="190" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-12" value="getSchedule()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="dKRTgPM4jX6CAK4NP_HR-4" target="dKRTgPM4jX6CAK4NP_HR-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="244.57999999999998" as="sourcePoint" />
+            <mxPoint x="710" y="244.57999999999998" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-13" value="schedule" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="dKRTgPM4jX6CAK4NP_HR-7" target="dKRTgPM4jX6CAK4NP_HR-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="270" as="targetPoint" />
+            <mxPoint x="340" y="290" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="700" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dKRTgPM4jX6CAK4NP_HR-14" value="manageSchedulePanel" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="dKRTgPM4jX6CAK4NP_HR-4" target="dKRTgPM4jX6CAK4NP_HR-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="280" as="targetPoint" />
+            <mxPoint x="550" y="280" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="495" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
