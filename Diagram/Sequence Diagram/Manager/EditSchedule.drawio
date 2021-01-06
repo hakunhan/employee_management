@@ -1,1 +1,92 @@
-<mxfile host="app.diagrams.net" modified="2021-01-06T13:48:46.764Z" agent="5.0 (Windows)" version="14.1.8" etag="SOdC8f7BiEWtTLyrLgrq" type="github"><diagram id="5iAuwSaB2xhJvP3a2J2k">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-06T13:49:34.560Z" agent="5.0 (Windows)" etag="bHUBKLLtgLw8yqoIfXVx" version="14.1.8" type="github">
+  <diagram id="5iAuwSaB2xhJvP3a2J2k" name="Page-1">
+    <mxGraphModel dx="868" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-1" value="ManageSchedule&#xa;View" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="80" width="100" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="KZxGcJARNrhg4Dw1K4W4-1">
+          <mxGeometry x="45" y="90" width="10" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-3" value="confirmChangePopup()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="KZxGcJARNrhg4Dw1K4W4-1" source="KZxGcJARNrhg4Dw1K4W4-2" target="KZxGcJARNrhg4Dw1K4W4-2">
+          <mxGeometry x="-0.1538" y="10" relative="1" as="geometry">
+            <mxPoint x="80" y="269.5" as="sourcePoint" />
+            <mxPoint x="255" y="269.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110" y="150" />
+              <mxPoint x="110" y="170" />
+              <mxPoint x="110" y="180" />
+              <mxPoint x="80" y="180" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-4" value="ConfirmEdit&#xa;Schedule&#xa;Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;size=50;" vertex="1" parent="1">
+          <mxGeometry x="410" y="80" width="100" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-5" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="KZxGcJARNrhg4Dw1K4W4-4">
+          <mxGeometry x="45" y="180" width="10" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-6" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-7" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="80" width="100" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-8" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="KZxGcJARNrhg4Dw1K4W4-7">
+          <mxGeometry x="45" y="190" width="10" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-9" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="10" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-10" value="edit schedule and click confirm" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" target="KZxGcJARNrhg4Dw1K4W4-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="210" as="sourcePoint" />
+            <mxPoint x="245" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="120" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-11" value="updateChange()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="KZxGcJARNrhg4Dw1K4W4-5" target="KZxGcJARNrhg4Dw1K4W4-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="390" as="sourcePoint" />
+            <mxPoint x="680" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-12" value="click confirm" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="280" as="sourcePoint" />
+            <mxPoint x="265" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="120" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-13" value="updateManageSchedule()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="KZxGcJARNrhg4Dw1K4W4-2" target="KZxGcJARNrhg4Dw1K4W4-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="310" as="sourcePoint" />
+            <mxPoint x="530" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="395" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KZxGcJARNrhg4Dw1K4W4-14" value="updateAndReturnHomePage()" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="1" source="KZxGcJARNrhg4Dw1K4W4-5" target="KZxGcJARNrhg4Dw1K4W4-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="270" as="targetPoint" />
+            <mxPoint x="340" y="290" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="390" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
