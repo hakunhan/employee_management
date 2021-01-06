@@ -21,7 +21,7 @@ public class SwitchManageEmployeePanelController {
         this.managerFrame = managerFrame;
     }
 
-    private Object[][] updateManageEmployeePanel() {
+    private Object[][] getEmployeeSchedule() {
         EmployeeSqlStatement employeeSqlStatement = new EmployeeSqlStatement();
         String statement = "SELECT COUNT(id) FROM employee;";
         ResultSet countEmployee = database.retrieveData(statement);
@@ -47,6 +47,6 @@ public class SwitchManageEmployeePanelController {
     }
 
     public JPanel getManageEmployeePanel(){
-        return new ManageEmployeePanel(managerFrame, updateManageEmployeePanel());
+        return new ManageEmployeePanel(managerFrame, getEmployeeSchedule());
     }
 }
